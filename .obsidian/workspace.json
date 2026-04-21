@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "项目测试文档.md",
+                "file": "华为软挑/赛题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "项目测试文档"
+              "title": "赛题"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "项目测试文档.md",
+                "file": "华为软挑/赛题.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "项目测试文档 的反向链接列表"
+              "title": "赛题 的反向链接列表"
             }
           },
           {
@@ -194,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d4dc3ee6e50de862",
+  "active": "ad0748158852b078",
   "lastOpenFiles": [
-    "2026-04-21.md",
     "项目测试文档.md",
+    "2026-04-21.md",
     "未命名.base",
     "未命名.canvas",
     "未命名 1.base",
