@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "软工/过程跟踪报告.md",
+                "file": "csa/4.29.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "过程跟踪报告"
+              "title": "4.29"
             }
           }
         ]
@@ -194,14 +194,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3f7ec7b7189a9d0a",
+  "active": "d4dc3ee6e50de862",
   "lastOpenFiles": [
+    "图片/Pasted image 20260429162843.png",
+    "csa/4.29.md",
+    "汇编实验/实验一.md",
+    "软工/过程跟踪报告.md",
     "软工/质量分析报告1.pdf",
     "软工/质量分析报告1.md",
     "软工/质量分析报告2.pdf",
     "软工/质量分析报告2.md",
     "软工/总结报告.md",
-    "软工/过程跟踪报告.md",
     "软工/~$量分析报告2.docx",
     "软工/~$量分析报告1.docx",
     "软工/质量分析报告2~177BA.tmp",
@@ -210,14 +213,11 @@
     "软工/质量分析报告1.docx",
     "软工/~$cument.docx",
     "软工/document.docx",
-    "汇编实验/实验一.md",
-    "csa/4.29.md",
-    "Pasted image 20260429171326.png",
-    "Pasted image 20260429171304.png",
-    "Pasted image 20260429165301.png",
-    "Pasted image 20260429163432.png",
-    "Pasted image 20260429163016.png",
-    "Pasted image 20260429162843.png",
+    "图片/Pasted image 20260429171326.png",
+    "图片/Pasted image 20260429171304.png",
+    "图片/Pasted image 20260429165301.png",
+    "图片/Pasted image 20260429163432.png",
+    "图片/Pasted image 20260429163016.png",
     "作业二.md",
     "项目测试文档.md",
     "考研备考/择校.md",
