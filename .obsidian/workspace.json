@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "汇编实验/实验一.md",
+                "file": "软工/过程跟踪报告.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "实验一"
+              "title": "过程跟踪报告"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 319.5
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -180,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 306.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,11 +194,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d4dc3ee6e50de862",
+  "active": "3f7ec7b7189a9d0a",
   "lastOpenFiles": [
-    "csa/4.29.md",
+    "软工/质量分析报告1.pdf",
+    "软工/质量分析报告1.md",
+    "软工/质量分析报告2.pdf",
+    "软工/质量分析报告2.md",
+    "软工/总结报告.md",
+    "软工/过程跟踪报告.md",
+    "软工/~$量分析报告2.docx",
+    "软工/~$量分析报告1.docx",
+    "软工/质量分析报告2~177BA.tmp",
+    "软工/质量分析报告2~D9289.tmp",
+    "软工/质量分析报告2.docx",
+    "软工/质量分析报告1.docx",
+    "软工/~$cument.docx",
+    "软工/document.docx",
     "汇编实验/实验一.md",
-    "汇编实验",
+    "csa/4.29.md",
     "Pasted image 20260429171326.png",
     "Pasted image 20260429171304.png",
     "Pasted image 20260429165301.png",
@@ -206,7 +219,6 @@
     "Pasted image 20260429163016.png",
     "Pasted image 20260429162843.png",
     "作业二.md",
-    "csa",
     "项目测试文档.md",
     "考研备考/择校.md",
     "考研备考/408/操作系统/第三章 内存管理.md",
@@ -218,9 +230,7 @@
     "考研备考/408/操作系统/第一章 计算机系统概述.md",
     "华为软挑/赛题.md",
     "2026-04-21.md",
-    "未命名.base",
     "未命名.canvas",
-    "未命名 1.base",
     "日记/2026-03-28.md",
     "日记/2026-03-22.md",
     "日记/2026-03-23.md",
@@ -228,18 +238,9 @@
     "日记/2026-03-25.md",
     "日记/2026-03-26.md",
     "日记/2026-03-27.md",
-    "蓝桥杯备赛/day1.md",
-    "测试文档.md",
     "图片/Pasted image 20260325160350.png",
-    "考研备考/408/数据结构",
     "图片/Pasted image 20260325234506.png",
     "图片/Pasted image 20260325231439.png",
-    "图片/Pasted image 20260325222235.png",
-    "编译原理",
-    "考研备考",
-    "图片",
-    "华为软挑",
-    "考研备考/408/操作系统",
-    "欢迎.md"
+    "图片/Pasted image 20260325222235.png"
   ]
 }
