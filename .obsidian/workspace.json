@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -196,6 +197,7 @@
   },
   "active": "98b88afc405282d1",
   "lastOpenFiles": [
+    "Pasted image 20260522192022.png",
     "考研备考/408/微积分/1.5轮复习.md",
     "密码学部分/公钥私钥.md",
     "密码学部分",
@@ -241,7 +243,6 @@
     "华为软挑/赛题.md",
     "2026-04-21.md",
     "未命名.canvas",
-    "日记/2026-03-28.md",
-    "日记/2026-03-22.md"
+    "日记/2026-03-28.md"
   ]
 }
