@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/408/微积分/1.5轮复习.md",
+                "file": "密码学部分/公钥私钥.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.5轮复习"
+              "title": "公钥私钥"
             }
           }
         ]
@@ -196,10 +196,12 @@
   },
   "active": "98b88afc405282d1",
   "lastOpenFiles": [
-    "考研备考/408/微积分/微积分.md",
     "考研备考/408/微积分/1.5轮复习.md",
-    "Pasted image 20260517100555.png",
+    "密码学部分/公钥私钥.md",
+    "密码学部分",
     "考研备考/408/线性代数/矩阵理解.md",
+    "考研备考/408/微积分/微积分.md",
+    "Pasted image 20260517100555.png",
     "考研备考/408/线性代数",
     "Pasted image 20260517114514.png",
     "Pasted image 20260517101922.png",
@@ -225,7 +227,6 @@
     "软工/~$量分析报告1.docx",
     "软工/质量分析报告2~177BA.tmp",
     "软工/质量分析报告2~D9289.tmp",
-    "软工/质量分析报告2.docx",
     "图片/Pasted image 20260429171326.png",
     "图片/Pasted image 20260429171304.png",
     "图片/Pasted image 20260429165301.png",
