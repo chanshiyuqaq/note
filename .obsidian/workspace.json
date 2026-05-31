@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/408/计算机网络/复习笔记.md",
+                "file": "考研备考/408/计算机网络/第二章-复习.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "复习笔记"
+              "title": "第二章-复习"
             }
           }
         ]
@@ -74,13 +74,11 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -198,9 +196,12 @@
   },
   "active": "9c15ecf5c72831c9",
   "lastOpenFiles": [
+    "Pasted image 20260531152421.png",
+    "考研备考/408/计算机网络/第一章-复习.md",
+    "考研备考/408/计算机网络/第二章-复习.md",
+    "Pasted image 20260530170035.png",
     "Pasted image 20260530142523.png",
     "考研备考/408/计算机网络/Tips.md",
-    "考研备考/408/计算机网络/复习笔记.md",
     "Pasted image 20260530085424.png",
     "考研备考/思路规划.md",
     "作业二.md",
@@ -232,13 +233,10 @@
     "密码学部分",
     "考研备考/408/线性代数/矩阵理解.md",
     "考研备考/408/微积分/微积分.md",
-    "图片/Pasted image 20260517100555.png",
     "考研备考/408/线性代数",
-    "图片/Pasted image 20260517114514.png",
     "考研备考/408/计组",
     "考研备考/408/微积分",
     "考研备考/408/数据结构/第六章 图.md",
-    "考研备考/408/数据结构/第一章 绪论.md",
     "软工/质量分析报告1.pdf",
     "软工/质量分析报告2.pdf",
     "软工/~$量分析报告2.docx",
