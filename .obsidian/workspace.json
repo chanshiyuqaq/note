@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -196,6 +197,8 @@
   },
   "active": "9c15ecf5c72831c9",
   "lastOpenFiles": [
+    "Pasted image 20260604230616.png",
+    "Pasted image 20260604230538.png",
     "Pasted image 20260604183006.png",
     "考研备考/408/微积分/1.5轮复习.md",
     "考研备考/408/计算机网络/第三章-复习.md",
@@ -213,8 +216,6 @@
     "SSD^.md",
     "Pasted image 20260603142648.png",
     "图片/Pasted image 20260602223348.png",
-    "图片/Pasted image 20260602222544.png",
-    "图片/Pasted image 20260602222336.png",
     "编译原理/备考.md",
     "编译原理/编译原理第七章作业.md",
     "考研备考/408/操作系统/第三章 内存管理.md",
