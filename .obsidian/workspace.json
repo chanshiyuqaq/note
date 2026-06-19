@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 246.5
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -194,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8abd76b04eb6e2a5",
+  "active": "3f7ec7b7189a9d0a",
   "lastOpenFiles": [
     "考研备考/择校.md",
     "编译原理/第九章 (目标代码生成).md",
