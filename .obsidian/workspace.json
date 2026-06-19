@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/思路规划.md",
+                "file": "软工/期末复习.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "思路规划"
+              "title": "期末复习"
             }
           }
         ]
@@ -194,23 +194,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8abd76b04eb6e2a5",
+  "active": "ad0748158852b078",
   "lastOpenFiles": [
-    "软工/个人任务.md",
+    "图片/Pasted image 20260617232214.png",
+    "图片/Pasted image 20260617232206.png",
+    "图片/Pasted image 20260617231835.png",
+    "图片/Pasted image 20260617231822.png",
+    "图片/Pasted image 20260617222955.png",
+    "图片/Pasted image 20260617222945.png",
+    "图片/Pasted image 20260617221951.png",
+    "图片/Pasted image 20260617221936.png",
+    "图片/Pasted image 20260616225231.png",
+    "图片/Pasted image 20260616221945.png",
+    "图片/Pasted image 20260619163836.png",
     "考研备考/思路规划.md",
+    "软工/个人任务.md",
     "考研备考/择校.md",
     "编译原理/第九章 (目标代码生成).md",
     "编译原理/第七章（翻译模式设计）.md",
-    "Pasted image 20260619163836.png",
-    "Pasted image 20260619163055.png",
-    "Pasted image 20260619162902.png",
-    "Pasted image 20260619154356.png",
-    "Pasted image 20260619154343.png",
-    "Pasted image 20260619153006.png",
-    "Pasted image 20260619152949.png",
-    "Pasted image 20260619152932.png",
-    "Pasted image 20260619145945.png",
-    "Pasted image 20260619145229.png",
     "编译原理/第四章（语法分析）.md",
     "编译原理/第三章（词法分析）.md",
     "编译原理/作业二.md",
@@ -234,7 +235,6 @@
     "考研备考/408/计算机网络/第二章-复习.md",
     "考研备考/408/计算机网络/第一章-复习.md",
     "考研备考/408/操作系统/第三章 内存管理.md",
-    "考研备考/408/操作系统/第二章 进程与线程.md",
     "考研备考/408/计算机网络",
     "密码学部分",
     "考研备考/408/线性代数",
