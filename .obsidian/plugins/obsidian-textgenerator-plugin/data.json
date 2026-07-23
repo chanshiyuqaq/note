@@ -1,0 +1,113 @@
+{
+  "version": "0.8.7",
+  "endpoint": "https://api.deepseek.com",
+  "models": [],
+  "api_key": "",
+  "encrypt_keys": false,
+  "selectedProvider": "OpenAI Chat (Langchain)",
+  "max_tokens": 15000,
+  "temperature": 0.7,
+  "frequency_penalty": 0.5,
+  "showStatusBar": true,
+  "outputToBlockQuote": false,
+  "freeCursorOnStreaming": false,
+  "allowJavascriptRun": false,
+  "experiment": false,
+  "promptsPath": "textgenerator/templates",
+  "textGenPath": "textgenerator/",
+  "prefix": "\n\n",
+  "tgSelectionLimiter": "^\\*\\*\\*",
+  "stream": true,
+  "context": {
+    "customInstructEnabled": true,
+    "includeClipboard": true,
+    "customInstruct": "Title: {{title}}\n  \nStarred Blocks: {{starredBlocks}}\n\t  \n{{tg_selection}}",
+    "contextTemplate": "Title: {{title}}\n\t\nStarred Blocks: {{starredBlocks}}\n\t  \n{{tg_selection}}"
+  },
+  "requestTimeout": 300000,
+  "options": {
+    "generate-text": true,
+    "generate-text-with-metadata": true,
+    "insert-generated-text-From-template": true,
+    "create-generated-text-From-template": false,
+    "search-results-batch-generate-from-template": true,
+    "insert-text-From-template": false,
+    "create-text-From-template": false,
+    "show-modal-From-template": true,
+    "open-template-as-tool": true,
+    "open-playground": true,
+    "set_max_tokens": true,
+    "set-llm": true,
+    "set-model": true,
+    "packageManager": true,
+    "create-template": false,
+    "get-title": true,
+    "generated-text-to-clipboard-From-template": false,
+    "calculate-tokens": true,
+    "calculate-tokens-for-template": true,
+    "text-extractor-tool": true,
+    "stop-stream": true,
+    "custom-instruct": true,
+    "generate-in-right-click-menu": false,
+    "batch-generate-in-right-click-files-menu": true,
+    "tg-block-processor": true,
+    "reload": true,
+    "disable-ribbon-icons": false,
+    "overlay-toolbar": false,
+    "log-slowest-operations": false
+  },
+  "advancedOptions": {
+    "generateTitleInstructEnabled": false,
+    "generateTitleInstruct": "Generate a title for the current document (do not use * \" \\ / < > : | ? .):\n{{substring content 0 255}}",
+    "includeAttachmentsInRequest": false
+  },
+  "autoSuggestOptions": {
+    "customInstructEnabled": true,
+    "customInstruct": "# Role\n你是一个学术笔记助手，擅长清晰、严谨地解释知识点、推导公式和整理逻辑。\n\n# Input Context\n\n- 光标前文：{{beforeCursor}}{{cursorParagraph}}\n\n# Task\n- 光标前文：{{beforeCursor}}是你要分析的内容，只分析当前我最近的这个问题，即光标前的这一个问题\n\n# Format & Rules\n1.不要用#或##或###等设置标题，意思是直接输出内容，不要输出额外重复我问题的句子，行内公式用 $...$，独占行公式用 $$...$$。\n2. 逻辑要严密，步骤要清晰，多使用分点（Markdown 列表）进行阐述。\n\n",
+    "systemPrompt": "# Role\n你是一个学术笔记助手，擅长清晰、严谨地解释知识点、推导公式和整理逻辑。\n\n# Input Context\n\n- 光标前文：{{beforeCursor}}{{cursorParagraph}}\n\n# Task\n- 光标前文：{{beforeCursor}}是你要分析的内容，只分析当前我最近的这个问题，即光标前的这一个问题\n\n# Format & Rules\n1.不要用#或##或###等设置标题，意思是直接输出内容，不要输出额外重复我问题的句子，行内公式用 $...$，独占行公式用 $$...$$。\n2. 逻辑要严密，步骤要清晰，多使用分点（Markdown 列表）进行阐述。\n\n",
+    "isEnabled": true,
+    "allowInNewLine": false,
+    "delay": 223,
+    "numberOfSuggestions": 1,
+    "triggerPhrase": "  ",
+    "stop": ".",
+    "showStatus": true,
+    "customProvider": false,
+    "inlineSuggestions": true,
+    "overrideTrigger": " ",
+    "showInMarkdown": false
+  },
+  "slashSuggestOptions": {
+    "isEnabled": true,
+    "triggerPhrase": "/"
+  },
+  "extractorsOptions": {
+    "PDFExtractor": true,
+    "WebPageExtractor": true,
+    "YoutubeExtractor": true,
+    "AudioExtractor": false,
+    "ImageExtractorEmbded": true,
+    "ImageExtractor": true
+  },
+  "displayErrorInEditor": false,
+  "LLMProviderProfiles": {},
+  "LLMProviderOptions": {
+    "whisper": {
+      "base_path": "https://api.openai.com/v1",
+      "model": "whisper-1",
+      "api_key": "",
+      "api_version": ""
+    },
+    "OpenAI Chat (Langchain)": {
+      "basePath": "https://api.deepseek.com",
+      "model": "deepseek-v4-flash",
+      "reasoningEffort": "medium",
+      "api_key": ""
+    }
+  },
+  "LLMProviderOptionsKeysHashed": {
+    "whisper.api_key": "__@#key_prefix#@__",
+    "OpenAI Chat (Langchain).api_key": "__@#key_prefix#@__sk-040bac75d0f84d80aa225ecc356e62c4"
+  },
+  "api_key_encrypted": "__@#key_prefix#@__sk-040bac75d0f84d80aa225ecc356e62c4"
+}
