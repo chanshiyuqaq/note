@@ -69,7 +69,7 @@
     "allowInNewLine": false,
     "delay": 223,
     "numberOfSuggestions": 1,
-    "triggerPhrase": "  ",
+    "triggerPhrase": ")(",
     "stop": ".",
     "showStatus": true,
     "customProvider": false,

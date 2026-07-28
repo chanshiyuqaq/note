@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/思路规划.md",
+                "file": "考研备考/22408/操作系统/第二章 进程与线程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "思路规划"
+              "title": "第二章 进程与线程"
             }
           },
           {
@@ -41,15 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/22408/数据结构/捋一遍.md",
+                "file": "考研备考/22408/思政/徐涛马原课.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "捋一遍"
+              "title": "徐涛马原课"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.50235748291016
+    "width": 200
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -235,30 +236,38 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "8f39192675e550e2",
+  "active": "4367e96548622684",
   "lastOpenFiles": [
-    "考研备考/22408/数据结构/错题.md",
-    "考研备考/22408/微积分/2轮 强化.md",
+    "考研备考/22408/操作系统/第一章 计算机系统概述.md",
     "考研备考/22408/计组/多处理器基本概念.md",
-    "考研备考/22408/数据结构/捋一遍.md",
-    "考研备考/22408/王道考研408公益课程_播放列表.md",
-    "考研备考/22408/微积分/1.5 轮复习.md",
-    "图片/Pasted image 20260723153225.png",
-    "考研备考/思路规划.md",
-    "图片/Pasted image 20260722095300.png",
-    "图片/Pasted image 20260722093920.png",
-    "考研备考/22408/微积分/微积分.md",
-    "图片/Pasted image 20260720182259.png",
-    "图片/Pasted image 20260720181452.png",
-    "考研备考/22408/计组/捋一遍.md",
-    "图片/Pasted image 20260720112037.png",
-    "图片/Pasted image 20260719094153.png",
-    "考研备考/22408/计组/过程调用细节.md",
     "考研备考/22408/微积分/整理.md",
-    "图片/Pasted image 20260718155527.png",
-    "图片/Pasted image 20260718154420.png",
-    "图片/Pasted image 20260718153731.png",
+    "图片/Pasted image 20260728145754.png",
+    "图片/Pasted image 20260728145742.png",
+    "图片/Pasted image 20260728145727.png",
+    "图片/Pasted image 20260728145635.png",
+    "图片/Pasted image 20260728145605.png",
+    "图片/Pasted image 20260728145424.png",
+    "考研备考/22408/微积分/1.5 轮复习.md",
+    "考研备考/22408/微积分/2轮 强化.md",
+    "图片/Pasted image 20260727203820.png",
+    "考研备考/22408/数据结构/捋一遍.md",
+    "考研备考/22408/数据结构/第一章 绪论.md",
+    "考研备考/22408/数据结构/第六章 图.md",
+    "考研备考/22408/微积分/微积分.md",
+    "图片/Pasted image 20260726215308.png",
+    "图片/Pasted image 20260726214125.png",
+    "考研备考/22408/数据结构/错题.md",
+    "考研备考/22408/操作系统/第二章 进程与线程.md",
+    "考研备考/22408/操作系统/第三章 内存管理.md",
     "考研备考/22408/线性代数/矩阵理解.md",
+    "考研备考/22408/王道考研408公益课程_播放列表.md",
+    "考研备考/思路规划.md",
+    "考研备考/22408/思政/徐涛马原课.md",
+    "图片/Pasted image 20260725174630.png",
+    "考研备考/22408/思政/新时代.md",
+    "未命名.base",
+    "考研备考/22408/计组/捋一遍.md",
+    "考研备考/22408/计组/过程调用细节.md",
     "copilot/copilot-conversations/DeepSeek_AI_自我介绍@20260715_091004.md",
     "copilot/copilot-conversations",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
@@ -266,14 +275,6 @@
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "考研备考/22408/线性代数",
@@ -282,7 +283,6 @@
     "考研备考/22408/数据结构",
     "考研备考/22408/操作系统",
     "考研备考/22408/思政",
-    "考研备考/22408/微积分",
     "未命名.canvas"
   ]
 }
