@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/22408/操作系统/第五章 IO.md",
+                "file": "考研备考/22408/数据结构/第六.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第五章 IO"
+              "title": "第六"
             }
           },
           {
@@ -251,8 +251,9 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "ad0748158852b078",
+  "active": "6f68e9d0526fc6ca",
   "lastOpenFiles": [
+    "考研备考/22408/操作系统/第五章 IO.md",
     "考研备考/22408/计组/强化.md",
     "考研备考/22408/计组/捋一遍.md",
     "考研备考/22408/计组/CheckList.md",
@@ -270,7 +271,6 @@
     "考研备考/22408/数据结构/第五章.md",
     "考研备考/22408/数据结构/第四章.md",
     "考研备考/22408/操作系统/第四章 文件系统.md",
-    "考研备考/22408/操作系统/第五章 IO.md",
     "考研备考/22408/操作系统/第二章 进程与线程.md",
     "考研备考/22408/操作系统/进度.md",
     "考研备考/22408/操作系统/第一章 计算机系统概述.md",
