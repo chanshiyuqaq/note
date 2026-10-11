@@ -120,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.50822830200195,
-    "collapsed": true
+    "width": 245.50822830200195
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -251,7 +250,7 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "0243f36b17829f53",
+  "active": "ad0748158852b078",
   "lastOpenFiles": [
     "考研备考/22408/思政/毛概.md",
     "考研备考/22408/操作系统/第四章 文件系统.md",
