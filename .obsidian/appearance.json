@@ -1,5 +1,6 @@
 {
   "cssTheme": "Typewriter",
   "accentColor": "#5c7bf5",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "textFontFamily": "等线,仿宋"
 }
