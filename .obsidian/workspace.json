@@ -178,17 +178,17 @@
             }
           },
           {
-            "id": "441ba82b9f0c45ba",
+            "id": "8890236627d8b4aa",
             "type": "leaf",
             "state": {
-              "type": "copilot-chat-view",
+              "type": "nutstore-sync-chatbox",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "copilot-chat-view"
+              "icon": "nutstore-ai",
+              "title": "Chatbox"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -207,7 +207,10 @@
       "obsidian-git:Open Git source control": false,
       "copilot:Open Copilot Chat": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "nutstore-sync:开始同步": false,
+      "nutstore-sync:停止同步": false,
+      "nutstore-sync:打开 Chatbox": false
     }
   },
   "active": "96c2e18123c0c3ac",
