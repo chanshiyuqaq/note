@@ -176,19 +176,9 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "8890236627d8b4aa",
-            "type": "leaf",
-            "state": {
-              "type": "nutstore-sync-chatbox",
-              "state": {},
-              "icon": "nutstore-ai",
-              "title": "Chatbox"
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
