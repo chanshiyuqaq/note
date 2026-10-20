@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/22408/思政/新时代.md",
+                "file": "考研备考/22408/操作系统/第二章 进程与线程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "新时代"
+              "title": "第二章 进程与线程"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258.65953063964844,
-    "collapsed": true
+    "width": 258.65953063964844
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -200,8 +199,8 @@
   },
   "active": "5c75d3c28ad109be",
   "lastOpenFiles": [
-    "考研备考/22408/思政/思修.md",
     "考研备考/22408/思政/新时代.md",
+    "考研备考/22408/思政/思修.md",
     "training_curve.png.md",
     "考研备考/22408/思政/史纲.md",
     "大三下/云计算/云计算.pdf",
