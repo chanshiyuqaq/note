@@ -1,0 +1,51 @@
+{
+  "myInterval": 3,
+  "myRetryCount": 30,
+  "restoreIntervalMs": 100,
+  "restoreDelayMs": 300,
+  "enableSmartRestoreDelay": false,
+  "positionState": {
+    "version": 2,
+    "files": {
+      "考研备考/22408/数据结构/捋一遍.md": {
+        "height": 758.447038008448,
+        "lastAccessed": 1792587980502
+      },
+      "考研备考/22408/操作系统/第三章 内存管理.md": {
+        "height": 371.98878344259344,
+        "lastAccessed": 1792589038986
+      },
+      "考研备考/22408/操作系统/第四章 文件系统.md": {
+        "height": 0,
+        "lastAccessed": 1792589117163
+      }
+    },
+    "leaves": {
+      "5c75d3c28ad109be": {
+        "height": 0,
+        "lastAccessed": 1792589117163,
+        "filePath": "考研备考/22408/操作系统/第四章 文件系统.md"
+      }
+    },
+    "bookmarks": {}
+  },
+  "scrollHeightData": {
+    "考研备考/22408/数据结构/捋一遍.md": {
+      "height": 758.447038008448,
+      "lastAccessed": 1792587980502
+    },
+    "考研备考/22408/操作系统/第三章 内存管理.md": {
+      "height": 371.98878344259344,
+      "lastAccessed": 1792589038986
+    },
+    "考研备考/22408/操作系统/第四章 文件系统.md": {
+      "height": 0,
+      "lastAccessed": 1792589117163
+    }
+  },
+  "listenEvent": "mouseover",
+  "pageSize": 10,
+  "enableAutoCleanup": false,
+  "cleanupDays": 30,
+  "dataManagementSettingsOpen": false
+}
