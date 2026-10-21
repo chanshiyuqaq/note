@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/22408/微积分/微积分.md",
+                "file": "考研备考/22408/数据结构/捋一遍.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "微积分"
+              "title": "捋一遍"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.2805061340332,
-    "collapsed": true
+    "width": 203.22382354736328
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -200,6 +199,7 @@
   },
   "active": "5c75d3c28ad109be",
   "lastOpenFiles": [
+    "考研备考/22408/微积分/微积分.md",
     "图片/Pasted image 20261021190324.png",
     "图片/Pasted image 20261021190323.png",
     "图片/Pasted image 20261021175535.png",
@@ -212,7 +212,6 @@
     "图片/Pasted image 20261020193824.png",
     "图片/Pasted image 20261020193438.png",
     "图片/Pasted image 20261020193315.png",
-    "图片/Pasted image 20261020192630.png",
     "考研备考/22408/王道考研408.md",
     "考研备考/22408/数据结构/捋一遍.md",
     "考研备考/22408/操作系统/进度.md",
