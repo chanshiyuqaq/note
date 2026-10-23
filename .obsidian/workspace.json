@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/22408/真题分析/数学模拟题分析/张八.md",
+                "file": "考研备考/22408/思政/马原.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "张八"
+              "title": "马原"
             }
           }
         ]
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.94472122192383
+    "width": 231.94472122192383,
+    "collapsed": true
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -99,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "考研备考/22408/真题分析/数学模拟题分析/张八.md",
+                "file": "考研备考/22408/思政/马原.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,6 +203,7 @@
   },
   "active": "eaecf09c25ac109f",
   "lastOpenFiles": [
+    "考研备考/22408/真题分析/数学模拟题分析/张八.md",
     "图片/ecee35f311ae515e843efbac17cb5334.jpeg",
     "图片/Pasted image 20261023184215.png",
     "图片/Pasted image 20261023184200.png",
@@ -225,14 +227,12 @@
     "考研备考/22408/微积分/整理2.md",
     "考研备考/22408/微积分/整理1.md",
     "考研备考/22408/微积分/微积分.md",
-    "考研备考/22408/真题分析/数学模拟题分析/张八.md",
     "图片/Pasted image 20261022115110.png",
     "图片/Pasted image 20261022113355.png",
     "图片/Pasted image 20261022113238.png",
     "图片/Pasted image 20261022113022.png",
     "图片/Pasted image 20261022112931.png",
     "图片/Pasted image 20261022112917.png",
-    "图片/Pasted image 20261022111715.png",
     "考研备考/22408/操作系统/进度.md",
     "考研备考/22408/王道考研408.md",
     "考研备考/22408/思政/新时代.md",
