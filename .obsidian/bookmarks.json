@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1792725146219,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1792725146219,
+          "items": [
+            {
+              "type": "group",
+              "ctime": 1792725146219,
+              "items": [
+                {
+                  "type": "group",
+                  "ctime": 1792725146219,
+                  "items": [
+                    {
+                      "type": "group",
+                      "ctime": 1792725324086,
+                      "items": [],
+                      "title": "强化大题总结"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1792725324086,
+                      "path": "考研备考/22408/操作系统/第二章 进程与线程.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1792725324086,
+                      "path": "考研备考/22408/操作系统/第三章 内存管理.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1792725324086,
+                      "path": "考研备考/22408/操作系统/第四章 文件系统.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1792725324086,
+                      "path": "考研备考/22408/操作系统/第五章 IO.md",
+                      "subpath": "#^-"
+                    },
+                    {
+                      "type": "file",
+                      "ctime": 1792725324086,
+                      "path": "考研备考/22408/操作系统/第一章 计算机系统概述.md",
+                      "subpath": "#^-"
+                    }
+                  ],
+                  "title": "操作系统"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "计算机网络"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "计组"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "数据结构"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "思政"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "微积分"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "线性代数"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "英语"
+                },
+                {
+                  "type": "group",
+                  "ctime": 1792725161142,
+                  "items": [],
+                  "title": "真题分析"
+                },
+                {
+                  "type": "file",
+                  "ctime": 1792725161142,
+                  "path": "考研备考/22408/王道考研408.md",
+                  "subpath": "#^-"
+                }
+              ],
+              "title": "\\\\22408"
+            }
+          ],
+          "title": "\\\\考研备考"
+        }
+      ],
+      "title": "sortspec"
+    }
+  ]
+}
