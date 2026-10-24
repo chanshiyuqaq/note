@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "考研备考/22408/思政/马原.md",
+                "file": "考研备考/22408/线性代数/线性代数.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "马原"
+              "title": "线性代数"
             }
           }
         ]
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 231.94472122192383,
-    "collapsed": true
+    "width": 231.94472122192383
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -203,7 +202,9 @@
   },
   "active": "eaecf09c25ac109f",
   "lastOpenFiles": [
+    "考研备考/22408/微积分/微积分.md",
     "考研备考/22408/真题分析/数学模拟题分析/张八.md",
+    "考研备考/22408/思政/马原.md",
     "图片/ecee35f311ae515e843efbac17cb5334.jpeg",
     "图片/Pasted image 20261023184215.png",
     "图片/Pasted image 20261023184200.png",
@@ -226,7 +227,6 @@
     "考研备考/22408/操作系统/第一章 计算机系统概述.md",
     "考研备考/22408/微积分/整理2.md",
     "考研备考/22408/微积分/整理1.md",
-    "考研备考/22408/微积分/微积分.md",
     "图片/Pasted image 20261022115110.png",
     "图片/Pasted image 20261022113355.png",
     "图片/Pasted image 20261022113238.png",
