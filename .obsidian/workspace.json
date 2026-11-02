@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.6721305847168
+    "width": 252.6721305847168,
+    "collapsed": true
   },
   "right": {
     "id": "de9b4ea5be5a700a",
@@ -202,6 +203,10 @@
   },
   "active": "eaecf09c25ac109f",
   "lastOpenFiles": [
+    "图片/Pasted image 20261102155130.png",
+    "图片/Pasted image 20261102154813.png",
+    "图片/Pasted image 20261102154254.png",
+    "图片/Pasted image 20261102154232.png",
     "图片/Pasted image 20261102151005.png",
     "图片/Pasted image 20261102145808.png",
     "图片/Pasted image 20261102143627.png",
@@ -211,15 +216,11 @@
     "图片/Pasted image 20261101211231.png",
     "图片/Pasted image 20261101211211.png",
     "图片/Pasted image 20261101211200.png",
-    "图片/Pasted image 20261101211144.png",
-    "图片/Pasted image 20261101211138.png",
-    "图片/Pasted image 20261101211136.png",
     "考研备考/22408/微积分/1.5 轮复习(巩固思路).md",
     "大四上/生物信息学",
     "考研备考/22408/微积分/微积分.md",
     "考研备考/22408/计组/捋一遍.md",
     "考研备考/22408/微积分/数学模拟题分析/李六.md",
-    "图片/Pasted image 20261101182148.png",
     "考研备考/22408/微积分/数学模拟题分析/张八.md",
     "考研备考/22408/微积分/数学模拟题分析/未命名",
     "考研备考/22408/微积分/数学模拟题分析/1000题四套卷.md",
