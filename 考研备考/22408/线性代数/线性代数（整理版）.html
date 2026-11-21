@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>线性代数 · 考研笔记（整理版）</title>
+<style>
+:root{--bg:#fbfbfd;--card:#fff;--ink:#20242c;--muted:#6b7280;--line:#e5e7eb;--accent:#2f5fd0;--mark:#fff2b8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif;font-size:15.5px;line-height:1.85}
+.wrap{max-width:940px;margin:0 auto;padding:36px 30px 90px}
+h1{font-size:27px;line-height:1.4;margin:0 0 18px;padding-bottom:14px;border-bottom:3px solid var(--accent)}
+h2{font-size:21px;margin:44px 0 16px;padding:8px 14px;background:#eef3ff;border-left:5px solid var(--accent);border-radius:0 6px 6px 0;scroll-margin-top:16px}
+h3{font-size:17px;margin:30px 0 12px;padding-bottom:6px;border-bottom:1px dashed var(--line);scroll-margin-top:16px}
+p{margin:9px 0}
+blockquote{margin:12px 0;padding:10px 16px;background:#f6f8fc;border-left:4px solid #b9c9ee;color:#374151;border-radius:0 6px 6px 0}
+blockquote p{margin:4px 0}
+ul,ol{padding-left:26px;margin:8px 0}
+li{margin:4px 0}
+mark{background:var(--mark);padding:1px 3px;border-radius:3px}
+strong{color:#14213d}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+code{background:#f1f3f7;padding:1px 5px;border-radius:4px;font-family:Consolas,monospace;font-size:.92em}
+table{border-collapse:collapse;margin:14px 0;width:100%}
+th,td{border:1px solid var(--line);padding:7px 11px;text-align:left}
+th{background:#f3f6fc}
+.mathblock{margin:14px 0;padding:10px 14px;background:#f8f9fc;border:1px solid #eceff6;border-radius:6px;overflow-x:auto;font-family:Consolas,monospace;text-align:center}
+.fig{display:block;margin:16px 0;text-align:center}
+.fig img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.cap{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 24px;margin:22px 0 30px;box-shadow:0 2px 10px rgba(20,40,90,.05)}
+.toc h2{font-size:18px;margin:0 0 10px;background:none;border:0;padding:0}
+.toc ol{padding-left:22px;margin:0}
+.toc ul{padding-left:20px;margin:2px 0 6px;list-style:none}
+.toc ul li{font-size:13.5px;color:var(--muted)}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc > ol > li{margin:8px 0;font-weight:600}
+@media print{body{background:#fff;font-size:11pt}.wrap{max-width:none;padding:0}.toc{break-after:page;box-shadow:none}h2{break-after:avoid}.fig{break-inside:avoid}img{max-height:20cm}}
+</style></head>
+<body><div class="wrap"><h1>线性代数 · 考研笔记（整理版）</h1>
+<blockquote>
+<p><strong>整理说明</strong>：本版只做「结构化」——补全章 / 节标题、目录与每章导航，<strong>不搬动、不改写、不删减任何一行原文</strong>。
+所有 Obsidian 图片嵌入引用连同其所在行、显示宽度参数、前后文字均逐字保留在原位置，图片语境与原笔记完全一致。
+原笔记 <code>线性代数.md</code> 未被修改；图片仍从库目录 <code>D:\obsidian_storage\大三下（考研）\图片</code> 读取。</p>
+</blockquote>
+<nav class="toc" id="toc"></nav>
+
+<h2>0 · 复习进度表</h2>
+<blockquote>
+<p><strong>本节导航</strong>：（本章为连续散记，无细分小节）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">2轮</th>
+<th style="text-align: center;">回看课本并做笔记</th>
+<th style="text-align: right;">1000强</th>
+<th>660</th>
+<th>880(选填)</th>
+<th>例题重做</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">第一章</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: right;">√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">第二章</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: right;"></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">第三章</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: right;"></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">第四章</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: right;"></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">第五章</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: right;"></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">第六章</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: right;">√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>1 · 矩阵乘法、列空间与合同变换</h2>
+<blockquote>
+<p><strong>本节导航</strong>：1.1 行列式、同解与几何意义（散记） ｜ 1.2 转置运算的性质 ｜ 1.3 AB = BA 可交换的情形 ｜ 1.4 方阵求幂的禁忌 ｜ 1.5 特殊矩阵与易错辨析 ｜ 1.6 逆矩阵的运算性质与求逆方法 ｜ 1.7 伴随矩阵</p>
+</blockquote>
+<ul>
+<li>AB=0
+    从观察视角上看，可以将B中<strong>每一个列向量看为</strong> Ax=0的<strong>解集中的一个解</strong>
+    其中A为系数矩阵x代表{x1,x2,x3......}</li>
+<li>A的秩为1，n为3，若非齐次线性方程组Ax=b有解，则其线性无关解的个数为?
+    分析，A的自由变量为2，非齐次的解集表示为$k_1c_1+k_2c_2+c$
+    是三个，可以理解为<strong>c 不在c1与c2张成的空间</strong>里面 , 因为Ac = b ,所以是线性无关的，还有c1 与c2是基，也是无关的，这三个，其余的解都是由这三个组合的</li>
+</ul>
+<p>对于A如果是一个对称矩阵
+$P^TAP$也是对称阵，意思是这种变换不改变对称性，此时如果有P是可逆的则称为是合同变换</p>
+<p><mark>关于列空间的理解</mark>
+Ax = c 本质是将A按照列分块为{a1,a2,a3,a4}然后 x代表{x1,x2,x3,4}将{a1,a2,a3,a4}线性组合，结果是c
+- AB = C中的B可以看成是多个列向量拼在一起，AB的结果就是一个矩阵，该矩阵的每一列都是A列的线性组合。
+    - 若 C 的列无关，一定能推出B列无关；当B为方阵的时候能推出A列无关；<strong>B 可逆意味着它只换坐标系、不改内容，因此 A 与 AB 的列空间是同一个空间；既然空间没变、向量的个数还是 n 个</strong>
+    - rank(A)小于C的列数，或者rank(B)小于C的列数，会导致C的列相关；</p>
+<ul>
+<li>
+<p>补充C行满秩情况下能推出什么？补充A列满秩下能推出什么？
+C行满秩-&gt;也就是AB行满秩，说明A行满秩
+A列满秩情况下，比较B与C的秩 即比较B与AB的秩的关系，易知道这两个方程同解所以相同</p>
+</li>
+<li>
+<p>如果限定AB都为方阵的情况？</p>
+<ul>
+<li>此时C的列无关推出AB都可逆</li>
+<li>A与B的任意不可逆导致C不可逆</li>
+</ul>
+</li>
+</ul>
+<p><span class="fig"><img src="images/Pasted%20image%2020261118173338.png" style="" alt="图 1"><span class="cap">图 1 · 对应原笔记第 35 行</span></span></p>
+<h3>1.1 行列式、同解与几何意义（散记）</h3>
+<p>分析矩阵AX=0 与 BX=0同解的充要条件(约束一样): <br />
+- A与B的,约束一样，即行空间相同
+- X(一列)能使得A中每一行变为0，则<mark>B理解为</mark>A中每一行作为基的组合，自然能使得B中每一行为0
+- $\begin{vmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{vmatrix}$ 表示 $(a_{11},a_{12})、(a_{21},a_{22})$ 和原点构成平行四边形的面积（由①→②，逆时针为正，顺时针为负）
+- 叉乘法算 $3\times3$ 行列式
+- 将行列式一行视为一个向量，理解其几何意义
+- 行列式运算：$|AB|=|A||B|$
+- 转置行列式：$|A^T|=|A|$
+- 行列式某一行的公共因子可以提出来
+- 行列式具备可拆性
+- 注意区分：$|A+B| \neq |A|+|B|$，不要和 $|AB|=|A||B|$ 混淆
+- 行列式两行/列互换，行列式值变号（互换变号）
+- 对于一个排列，向后统计本该排在前面元素的数量，该数值即为该元素的逆序数；
+  展开定理：某行/列（元素 × 代数余子式）求和；余子式不带符号，代数余子式携带正负符号
+- $\boldsymbol{|A|=|A^{T}|}$
+    - $A$ 的特征值：方程 $|\lambda E-A|=0$ 的根
+    - $A^{T}$ 的特征值：方程 $|\lambda E-A^{T}|=0$ 的根与矩阵 $A$ 完全一致
+- 正交矩阵满足：$\boldsymbol{E=AA^{T}}$
+- 伴随矩阵行列式公式
+    $|A^{*}|=|A|^{n-1}$
+    $\bigl|(A^{*})^{*}\bigr|=\bigl||A|^{n-2}A\bigr|=\big(|A|^{n-2}\big)^{n}|A|=|A|^{n^{2}-2n+1}$
+- $\boldsymbol{A^{2}=A \Rightarrow A}$ 的特征值为 $0$ 或 $1$（幂等矩阵）
+- 对于可对角化矩阵，矩阵的秩等于非零特征值的个数
+- 记号 $\boldsymbol{A_{ij}}$ 代表代数余子式，本身已经包含正负符号
+- $\boldsymbol{|A^{*}|=|A|^{n-1}}$</p>
+<ul>
+<li>等价矩阵是指两个矩阵能通过初等变换互化</li>
+<li><mark>一列乘以一行，得到一个矩阵，一行乘一列，得到内积</mark>，这个性质<mark>可用于化简表达式</mark>，例如化简$A^n$这个</li>
+<li>正交矩阵做数据的旋转</li>
+<li>上三角下三角，做剪切变换</li>
+<li>AB不一定是方阵，但是$AA^T,BB^T$一定是方阵</li>
+<li>矩阵乘法没有交换律</li>
+<li>AB=0 两个矩阵相乘结果为0，则不能推出A=0或B等于0，有可能AB都不为0！</li>
+<li>不满足消去率，AC=AB 不能两边消去A进而得到C=B！，A可逆的时候可以</li>
+</ul>
+<h3>1.2 转置运算的性质</h3>
+<p><mark>转置运算：满足的性质</mark>,可以和求逆，求伴随 交换</p>
+<ul>
+<li><strong>双重转置</strong>：$(A^T)^T = A$</li>
+<li><strong>加法保持</strong>：$(A+B)^T = A^T + B^T$</li>
+<li><strong>数乘保持</strong>：$(kA)^T = kA^T$</li>
+<li><strong>乘法反序</strong>：$(AB)^T = B^T A^T$<br />
+  注意顺序会交换；这是矩阵乘积转置最核心的性质。</li>
+<li>
+<p><strong>可逆性保持</strong>：若 $A$ 可逆，则 $A^T$ 也可逆，且
+  <div class="mathblock">$$(A^T)^{-1} = (A^{-1})^T$$</div></p>
+</li>
+<li>
+<p><strong>行列式不变</strong>：$|A^T| = |A|$</p>
+</li>
+<li><strong>秩不变</strong>：$\operatorname{rank}(A^T) = \operatorname{rank}(A)$</li>
+<li>
+<p><strong>特征值相同</strong>：若 $A$ 为方阵，则 $A$ 与 $A^T$ 的特征值完全相同，因为<div class="mathblock">$$|\lambda E - A^T| = |(\lambda E - A)^T| = |\lambda E - A|$$</div></p>
+</li>
+<li>
+<p><strong>伴随矩阵可交换转置</strong>：$(A^*)^T = (A^T)^*$</p>
+</li>
+<li><strong>行空间与列空间互换</strong>：$A^T$ 的行向量就是 $A$ 的列向量，$A^T$ 的列向量就是 $A$ 的行向量。<br />
+  因此 $A$ 的行空间与 $A^T$ 的列空间相同，$A$ 的列空间与 $A^T$ 的行空间相同。</li>
+</ul>
+<h3>1.3 AB = BA 可交换的情形</h3>
+<p>当AB=BA时候能得到的结论：
+<span class="fig"><img src="images/Pasted%20image%2020261027210316.png" style="" alt="图 2"><span class="cap">图 2 · 对应原笔记第 94 行</span></span><span class="fig"><img src="images/Pasted%20image%2020261030102349.png" style="" alt="图 3"><span class="cap">图 3 · 对应原笔记第 94 行</span></span>
+- 一个是满足交换率
+- 还有 如果v是A的特征向量，则Bv也是A的特征向量
+- <mark>AB与BA的特征值完全相同，特征向量不同</mark></p>
+<h3>1.4 方阵求幂的禁忌</h3>
+<p>方阵求幂运算：
+- 因为AB!=BA，所以$(A+B)^2 \neq A^2+B^2+2AB$
+- $(A+B)(A-B)\neq A^2-B^2$
+- $(AB)^m \neq (A^mB^m)$</p>
+<h3>1.5 特殊矩阵与易错辨析</h3>
+<ul>
+<li>A不是0矩阵，但是A的行列式仍可能为0</li>
+<li>
+<p>A不等于B，A的行列式仍可能等于B</p>
+</li>
+<li>
+<p>对角矩阵，主对角线元素都为1，其余元素全为零的n阶方阵</p>
+</li>
+<li>反对称矩阵，意思是$A^T=-A$,这意味着主对角线元素都为0，其余在对称位置上的相应的元素<mark>互为相反数</mark></li>
+<li>
+<p>进一步实特征向量对应特征值0<span class="fig"><img src="images/Pasted%20image%2020261027210934.png" style="width:491px;" alt="图 4"><span class="cap">图 4 · 对应原笔记第 109 行</span></span></p>
+</li>
+<li>
+<p>分块矩阵，也可进行乘法！</p>
+</li>
+<li>A是秩一方阵的时候，$A^n=[tr(A)]^{n-1}A$<ul>
+<li>证明：秩一矩阵可以拆分为一列乘一行，然后n个相乘中间变为内积</li>
+<li>而内积正好就是$[tr(A)]$</li>
+</ul>
+</li>
+<li>主对角线为0的上三角矩阵，B，$B^n=O$</li>
+<li>涉及逆矩阵的时候，一定是方阵</li>
+</ul>
+<h3>1.6 逆矩阵的运算性质与求逆方法</h3>
+<ul>
+<li>基本运算性质：</li>
+<li>双重逆：$(A^{-1})^{-1}=A$</li>
+<li>数乘：$(kA)^{-1}=\frac{1}{k}A^{-1},\; k\neq 0$</li>
+<li>乘积反序：$(AB)^{-1}=B^{-1}A^{-1}$；推广：$(A_1A_2\cdots A_m)^{-1}=A_m^{-1}\cdots A_2^{-1}A_1^{-1}$</li>
+<li>幂：$(A^n)^{-1}=(A^{-1})^n$（$n$ 为整数）</li>
+<li>转置：$(A^T)^{-1}=(A^{-1})^T$</li>
+<li>伴随：$(A^*)^{-1}=(A^{-1})^*=\frac{A}{|A|}$</li>
+<li>行列式：$|A^{-1}|=\frac{1}{|A|}$</li>
+<li>
+<p>秩：$\operatorname{rank}(A^{-1})=\operatorname{rank}(A)=n$（$n$ 为阶数）</p>
+</li>
+<li>
+<p>与零矩阵、消去律的关系：</p>
+</li>
+<li>若 $A$ 可逆且 $AB=0$，则 $B=0$。</li>
+<li>若 $A$ 可逆且 $AC=AB$，则 $C=B$（左乘 $A^{-1}$）。</li>
+<li>
+<p>可逆矩阵一定是非零矩阵；但非零矩阵不一定可逆。</p>
+</li>
+<li>
+<p>求逆方法：</p>
+</li>
+<li>伴随矩阵法：$A^{-1}=\frac{1}{|A|}A^*$</li>
+<li>
+<p>初等行变换法：$[A\mid E]\xrightarrow{\text{初等行变换}}[E\mid A^{-1}]$</p>
+</li>
+<li>
+<p>应用：若 $A$ 可逆，则线性方程组 $Ax=b$ 有唯一解 $x=A^{-1}b$。.)</p>
+</li>
+<li>
+<p>$(A+B)^{-1}\neq(A^{-1}+B^{-1})$</p>
+</li>
+<li>
+<p>使用定义法求逆的<mark>核心是</mark>对题目给出的式子进行恒等变形，看能否凑出所求的形式</p>
+</li>
+<li>同时可对所求的式子进行恒等变形，提公因式操作，即对E进行分解</li>
+</ul>
+<h3>1.7 伴随矩阵</h3>
+<ul>
+<li>伴随矩阵是 原矩阵的代数余子式，拼成的，具体而言是将元素变为代数余子式，然后原来横着写的现在竖着写</li>
+<li><mark>伴随矩阵的运算法则</mark></li>
+<li>$A^{*}A=AA{*}=|A|E$</li>
+<li>
+<p>伴随矩阵的运算法则 - <strong>伴随矩阵的定义</strong>：设 $A=(a_{ij})$ 为 $n$ 阶方阵，$A_{ij}$ 表示元素 $a_{ij}$ 的代数余子式（已含 $(-1)^{i+j}$ 的符号），则 $A$ 的伴随矩阵 $A^*$ 定义为
+  <div class="mathblock">$$
+  A^*=\begin{pmatrix}
+  A_{11} & A_{21} & \cdots & A_{n1}\\
+  A_{12} & A_{22} & \cdots & A_{n2}\\
+  \vdots & \vdots & \ddots & \vdots\\
+  A_{1n} & A_{2n} & \cdots & A_{nn}
+  \end{pmatrix}
+  $$</div>
+  即 $A^*$ 的第 $i$ 行第 $j$ 列元素是 $A_{ji}$</p>
+</li>
+<li>
+<p><strong>核心恒等式</strong>：
+  <div class="mathblock">$$
+  A^*A=AA^*=|A|E
+  $$</div>
+  这是伴随矩阵最重要的运算法则。由此可以推出：</p>
+</li>
+<li>若 $A$ 可逆（$|A|\neq0$），则
+    <div class="mathblock">$$
+    A^{-1}=\frac{1}{|A|}A^*
+    $$</div></li>
+<li>
+<p>若 $A$ 不可逆，则 $AA^*=O$，但仍然成立 $A^*A=O$。</p>
+</li>
+<li>
+<p><strong>常见的伴随矩阵运算法则</strong>（设 $A,B$ 均为 $n$ 阶方阵，$k$ 为常数）：</p>
+</li>
+<li><mark><strong>数乘(关键关键)</strong>：$(kA)^*=k^{n-1}A^*$</mark></li>
+<li><strong>转置</strong>：$(A^T)^*=(A^*)^T$</li>
+<li><strong>乘积反序</strong>：$(AB)^*=B^*A^*$</li>
+<li><strong>双重伴随</strong>：$(A^*)^*=|A|^{n-2}A$（当 $n\ge2$）</li>
+<li>
+<p><strong>可逆时的伴随</strong>：若 $A$ 可逆，则
+    <div class="mathblock">$$
+    (A^{-1})^*=(A^*)^{-1}=\frac{A}{|A|}
+    $$</div></p>
+</li>
+<li>
+<p><strong>行列式关系</strong>：
+   <div class="mathblock">$$
+  |A^*|=|A|^{n-1}
+  $$</div>
+  进一步，
+  <div class="mathblock">$$
+  |(A^*)^*|=\left||A|^{n-2}A\right|=|A|^{n(n-2)}\cdot |A|=|A|^{n^2-2n+1}
+  $$</div></p>
+</li>
+<li>
+<p><strong>使用注意</strong>：</p>
+</li>
+<li>代数余子式 $A_{ij}$ 本身包含符号 $(-1)^{i+j}$，因此运算时不要额外再添加符号。</li>
+<li>伴随矩阵排列时要<strong>转置</strong>：第 $i$ 行第 $j$ 列放的是 $A_{ji}$，不是 $A_{ij}$。</li>
+</ul>
+<h2>2 · 初等矩阵、阶梯型与分块矩阵求逆</h2>
+<blockquote>
+<p><strong>本节导航</strong>：2.1 等价矩阵与等价标准形 ｜ 2.2 与秩相关的 8 条公式 ｜ 2.3 正交矩阵的三角函数表示</p>
+</blockquote>
+<p><mark>初等矩阵的定义：</mark>由单位矩阵经过一次初等行变换得到的
+左行右列：对矩阵A进行行变换等价于在A的左乘初等矩阵，对A进行列变换等价与在A的右边乘初等矩阵</p>
+<p>初等矩阵的性质：初等矩阵是可逆矩阵，初等矩阵的转置仍是初等矩阵，如果A是可逆矩阵，则A可以表示为若干初等矩阵的乘积$A=P_1P_2P_3P_4....$</p>
+<p><mark>行阶梯型矩阵:</mark>
+若有零行则在最下方，非零行第一个非零元素的列从上到下增大
+行最简阶梯型，非零行第一个元素为1，非零元素所在列其余元素都为0</p>
+<p>任何矩阵A总可以经有限初等行变换，将其化为行阶梯型，最简行阶梯，其中可逆矩阵对应的最简行阶梯为E</p>
+<p>分块矩阵的逆： <br />
+  <div class="mathblock">$$
+  \begin{pmatrix}A&0\\0&B\end{pmatrix}^{-1}
+  =\begin{pmatrix}A^{-1}&0\\0&B^{-1}\end{pmatrix}
+  $$</div>
+  推广到多个分块对角子块也同理。</p>
+<ul>
+<li>
+<p><strong>分块上三角矩阵的逆</strong>：若 $A,B$ 均可逆，则<br />
+  <div class="mathblock">$$
+  \begin{pmatrix}A&C\\0&B\end{pmatrix}^{-1}
+  =\begin{pmatrix}A^{-1}&-A^{-1}CB^{-1}\\0&B^{-1}\end{pmatrix}
+  $$</div>
+  其中右上角是 $-A^{-1}CB^{-1}$，注意矩阵乘法顺序不能颠倒。</p>
+</li>
+<li>
+<p><strong>分块下三角矩阵的逆</strong>：若 $A,B$ 均可逆，则<br />
+  <div class="mathblock">$$
+  \begin{pmatrix}A&0\\C&B\end{pmatrix}^{-1}
+  =\begin{pmatrix}A^{-1}&0\\-B^{-1}CA^{-1}&B^{-1}\end{pmatrix}
+  $$</div>
+  左下角是 $-B^{-1}CA^{-1}$，同样注意顺序。</p>
+</li>
+<li>
+<p><strong>推导方法</strong>：设逆矩阵为同形分块 $\begin{pmatrix}X&Y\\Z&W\end{pmatrix}$，利用<br />
+  <div class="mathblock">$$
+  \begin{pmatrix}A&C\\0&B\end{pmatrix}
+  \begin{pmatrix}X&Y\\Z&W\end{pmatrix}
+  =\begin{pmatrix}I&0\\0&I\end{pmatrix}
+  $$</div>
+  比较各分块，即可解出 $X=A^{-1}$、$W=B^{-1}$、$Y=-A^{-1}CB^{-1}$、$Z=0$。.)</p>
+</li>
+</ul>
+<h3>2.1 等价矩阵与等价标准形</h3>
+<p>等价矩阵与等价标准型
+- 设AB都是m×n矩阵，若存在可逆矩阵，使得PAQ=B则AB是等价矩阵
+- <mark>理解为A经过若干行变换和列变换得到B</mark>
+- A等价形如,其中r表示A的秩
+$\begin{pmatrix}E_r&0\\0&0\end{pmatrix}$
+- <mark>矩阵等价的条件，秩相同</mark></p>
+<h3>2.2 与秩相关的 8 条公式</h3>
+<p>与矩阵秩相关的等式:
+① A是m<em>n的矩阵，则A的秩小于等于min(m,n)
+② r(kA)=r(A)
+③ 矩阵 <mark>乘积的秩</mark> 小于等于<mark>参与乘的每一个矩阵</mark>
+④ r(A+B)&lt;r(A)+r(B)
+⑤ r(A</em>)=n(A满秩)，1(A秩为n-1),0(A的秩小于n-1时)
+⑥ PAQ，其中PQ都是可逆矩阵，不改变A的秩，因为可以理解为对A做初等行变换，初等列变换，不改变秩
+⑦r(A)=r($A^{T}$)=r($A^{T}A$)=r($AA^{T}$)
+⑧如果<mark>两个矩阵相乘为0矩阵</mark>则r(A)+r(B)&lt;=n,n是A的列数</p>
+<h3>2.3 正交矩阵的三角函数表示</h3>
+<p>正交矩阵的三角函数表示: 满足 $Q^TQ=QQ^T=E$ 的实方阵称为正交矩阵，几何上对应<strong>保长度、保角度</strong>的线性变换，即<mark>旋转、反射或它们的复合。</mark></p>
+<ul>
+<li>二维正交矩阵的三角函数表示：
+  由于正交矩阵的列向量是标准正交基，可设第一列为 $(\cos\theta,\sin\theta)^T$，则第二列必须是与它正交的单位向量。两类可能：</li>
+<li>
+<p><strong>旋转变换</strong>（行列式为 $+1$）：
+    <div class="mathblock">$$
+    Q=\begin{pmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+    \end{pmatrix}
+    $$</div>
+    作用在向量上相当于<mark>逆时针旋转</mark>角度 $\theta$。</p>
+</li>
+<li>
+<p><strong>反射变换</strong>（行列式为 $-1$）：
+    <div class="mathblock">$$
+    Q=\begin{pmatrix}
+    \cos\theta & \sin\theta\\
+    \sin\theta & -\cos\theta
+    \end{pmatrix}
+    $$</div>
+    作用相当于关于某条过原点的直线作镜面反射。</p>
+</li>
+<li>
+<p>为什么用三角函数表示：</p>
+</li>
+<li>单位圆上的点可写为 $(\cos\theta,\sin\theta)$，正交矩阵的两列恰好构成一组标准正交基，因此都可用三角函数参数化。</li>
+<li>
+<p>这种表示把“保持长度”的代数条件转化为“角度”的几何参数，非常直观。</p>
+</li>
+<li>
+<p>与特征值的联系：</p>
+</li>
+<li>二维旋转矩阵的特征多项式为<div class="mathblock">$$
+    |\lambda E-Q|=\lambda^2-2\cos\theta\,\lambda+1=0
+    $$</div>特征值为 $\lambda=\cos\theta\pm i\sin\theta=e^{\pm i\theta}$。</li>
+<li>这解释了正交矩阵的特征值<mark>模长</mark>为 $1$，且<mark>实特征值</mark>(即theta取特定值例如0或者pi)只能是 $\pm1$</li>
+<li>特殊矩阵
+<span class="fig"><img src="images/Pasted%20image%2020260816095700.png" style="" alt="图 5"><span class="cap">图 5 · 对应原笔记第 287 行</span></span></li>
+<li>正定矩阵A 等价于 存在可逆矩阵D使得$A=DD^T$
+练习 扰动法</li>
+</ul>
+<h2>3 · 向量组与线性方程组（第三讲）</h2>
+<blockquote>
+<p><strong>本节导航</strong>：3.1 齐次 / 非齐次方程组的解 ｜ 3.2 向量组的延长与缩短、范德蒙德行列式 ｜ 3.3 向量组等价 vs 矩阵等价 ｜ 3.4 与向量组秩有关的定理与公式 ｜ 3.5 基础解系、A* 的零空间 ｜ 3.6 正交投影与 AᵀAx = Aᵀb ｜ 3.7 同解方程组的证明手段 ｜ 3.8 施密特正交化</p>
+</blockquote>
+<p>第三讲 向量组</p>
+<h3>3.1 齐次 / 非齐次方程组的解</h3>
+<p>正交矩阵满足 $A*A^T=E$ 这是个相当高的要求，意味着A的行(列)<mark>向量组是规范正交基</mark>
+即，两两垂直，且模长为1</p>
+<p>对于齐次方程而言 ， 核心在考虑 不能不能被表示：
+    当方程组与未知量的个数相同的时候，即约定了A是方阵，此时分析方式如下：
+    向量线性无关----Ax=0----只有0解----满秩----无自由变量
+    向量线性相关----Ax=0----有非零解(无穷多)----不满秩----有自由变量
+    当方程组的个数(约束)小于 未知量的个数的时候，有自由变量，无穷多解
+综上对于齐次方程，要么只有零解，要么有无穷多解</p>
+<p>对于非齐次方程，<mark>当方程组与未知量的个数相同的时候，即约定了A是方阵</mark>，从列空间的相容角度，若矩阵A的秩与增广后的矩阵的秩一样，即相容，则有解
+此时考察A，如果A满秩，则有唯一解，如果A不满秩，则有无穷多解</p>
+<p>若无解则说明增广之后矩阵秩多一
+非齐次方程如果A不是方阵，若方程组数小于未知数个数，则有可能有无穷多解有可能无解？
+解释如下所示：
+<span class="fig"><img src="images/Pasted%20image%2020261028090803.png" style="width:433px;" alt="图 6"><span class="cap">图 6 · 对应原笔记第 311 行</span></span>
+对于非齐次方程，
+分为有解，在相容的情况下，如果A是满秩，唯一标识，如果A不满秩，有无穷多解
+无解，无解有可能是增广之后列空间不相容，可能是方程组个数小于未知个数三种情况中的无解的情况</p>
+<p>对于非齐次还可以进行拓展，Ax=b A是m*n 其中m大于n,在相容情况下，只要A列满秩 就有唯一解，A列不满秩就有无穷多解</p>
+<h3>3.2 向量组的延长与缩短、范德蒙德行列式</h3>
+<p>向量组的延长与缩短问题：
+- 原来无关，延长必无关
+- 原来相关，缩短必相关</p>
+<p>向量组问题
+重新理解范德蒙德行列式，
+先有了s个不同的数，然后每一个数通过不同的次幂，衍生出一列，其维度为n
+当s=n的时候，可以使用范德蒙德行列式，得到其行列式不为0
+s&gt;n的时候，即列向量的个数大于维度，可知此时列向量之间是线性相关的
+s&lt;=n的时候，<mark>由s=n的时候得到线性无关，减少若干列向量仍是线性无关的</mark>
+<span class="fig"><img src="images/Pasted%20image%2020261028092405.png" style="" alt="图 7"><span class="cap">图 7 · 对应原笔记第 331 行</span></span></p>
+<p>三阶范德蒙德行列式值为2，四阶为12！
+<span class="fig"><img src="images/Pasted%20image%2020261028092639.png" style="" alt="图 8"><span class="cap">图 8 · 对应原笔记第 334 行</span></span></p>
+<h3>3.3 向量组等价 vs 矩阵等价</h3>
+<p>区分向量组的等价与矩阵等价：
+<mark>矩阵的等价指的是，两个矩阵通过若干初等变换，能变成一样</mark>的等价标准形</p>
+<p><mark>向量组等价——向量组秩一样且能单方表出</mark>
+而向量组等价指的是，将第二个向量组中的向量加入第一个向量组之后，不改变第一个向量组张成的空间，即 第二个向量组中的每一个向量都能由第一个向量组中若干向量表示；判断的等价条件是
+r(a1,a2,a3,a4,a5.....)=r(a1,a2,a3,a4,a5,b1,b2,b3,b4,b5.....)</p>
+<p>等价向量组有相同的秩，但是反过来有相同的秩不一定是等价向量组，
+等价向量组的秩只是一个数而已，表示这个向量组中极大线性无关向量的个数，
+<mark>秩一样不意味着能相互表出！！</mark></p>
+<h3>3.4 与向量组秩有关的定理与公式</h3>
+<p>与向量组的秩有关的重要定理和公式：
+- ①三秩相等，r(A)=A的行向量组的秩=A的列向量组的秩
+- ②如果A通过初等行变换得到B,则A的行向量组 与 B的行向量组 是等价向量组
+- ③行变换不改变列的相关性，可以理解为从A中挑选若干向量组成A1，对应位置从B中挑选若干向量组成B1,且   Q是一个可逆矩阵      则QA1=B1，A1和B1对应的齐次方程组是同解的，所以列相关性不变
+- <span class="fig"><img src="images/Pasted%20image%2020260817155250.png" style="width:264px;" alt="图 9"><span class="cap">图 9 · 对应原笔记第 351 行</span></span>
+- ④对于向量组b1,b2,b3,b4.....如果任意bi可以由a1,a2,a3,a4.....线性表示，则r(b1,b2,b3....)&lt;=r(a1,a2,a3,a4....)</p>
+<ul>
+<li>给定了n个向量组，求极大线性无关向量组的方法：将给出的向量组按列拼成一个矩阵，对矩阵做初等行变换，不改变列的相关性，然后按列找出一个秩为r(A)的子矩阵，即为极大线性无关组</li>
+<li>
+<p>向量组的秩是唯一的，其极大线性无关组可以是不唯一的</p>
+</li>
+<li>
+<p>课本证明了r(AB)&lt;=min{A,B},使用的证明方式是，AB是由A中向量线性组合成，或者由B中向量组合成</p>
+</li>
+<li>r(A+B)&lt;=r(A,B)&lt;=r(A)+r(B),证明方式，向量组 A+B 中的向量可以由 （A,B）中的向量线性组合成，右侧不等号是由于A和B拼起来的极大线性无关组的秩，<mark>小于等于分别的极大线性无关组的秩相加</mark></li>
+<li>对于矩阵AB=0的理解，Ax=0的零空间维度是n-r(A),而B的维度小于等于n-r(A)，所以r(B)+r(A)&lt;=N</li>
+<li>A*的行向量组只有三种情况，n行线性无关，n行两两成比例，行向量全部是零向量</li>
+</ul>
+<h3>3.5 基础解系、A* 的零空间</h3>
+<ul>
+<li>
+<p>正常解法是 一开始就设自由变量为 多少k1,多少k2，然后将其余的用k1,k2表示出来，然后再分开（老老实实用正常解法做就行！！！）</p>
+</li>
+<li>
+<p>A与A<em>，如果知道A的秩为n-1,则A</em>的秩为1，说明A*的零空间的秩为n-1</p>
+</li>
+<li>又$AA^*=|A|E$ , 因为|A|为0，所以$A^*A$=0,所以A中的列向量都在$A^*$的零空间里面，所以$A^*$的零空间就是从A中找n-1个线性无关的列向量</li>
+</ul>
+<h3>3.6 正交投影与 AᵀAx = Aᵀb</h3>
+<ul>
+<li>
+<p>对于Ax=b，其中A是m*n的矩阵，当r(A)=m的时候，方程有解，原因是当r(A)=m的时候，A的行满秩，即行向量线性无关，原来无关延长必无关，所以增广之后的秩也还是m</p>
+</li>
+<li>
+<p>Ax=b不一定有解但是 $A^{T}Ax=A^{T}b$ 一定有解</p>
+</li>
+<li>考察增广之后的矩阵 r(C)&gt;=r(A)</li>
+<li>又因为增广之后的矩阵 可以将$A^{T}$提取出来，因此 r(C)&lt;r($A^{T}$)</li>
+<li>有关于<mark>正交投影的</mark></li>
+<li>平面是A的列空间张成的平面，目标方程为$Ax=\alpha$</li>
+<li>$\alpha$是目标向量，此时无解，然后我们将$\alpha$投影到A的空间的平面上，即$\alpha$左乘$A(A^{T}A)^{-1}A^{T}$,   要求A列满秩</li>
+<li>$Ax= A(A^{T}A)^{-1}A^{T}\alpha$，该方程的解就是$A^{T}Ax=A^{T}\alpha$的解</li>
+<li>即满足$A^{T}(\alpha-Ax)=0$,这里的x是近似解，</li>
+<li>保证残差与平面垂直，为什么与$A^T$相乘为0就代表与平面垂直？因为根据相乘的过程，本质是这个解与A的每一列正交(对应$A^T$的每一行)</li>
+<li>当A的列不满秩，此时投影矩阵不是$A(A^{T}A)^{-1}A^{T}$，而是别的某个矩阵，但是最后的解的集合仍然与$A^{T}Ax=A^{T}\alpha$的解集合一样</li>
+<li>齐次方程组与非齐次方程组 解的关系的分析</li>
+<li>对于非齐次方程组的解，满足Ax1=b , Ax2=b , 所以自然可以得到A(x1-x2)=0 ，即得到齐次的解； 对于已知的解x1,x2,x3，<mark>可以得到(x1+x2)/2 , (x1+x2+x3)/3 是其特解</mark></li>
+</ul>
+<h3>3.7 同解方程组的证明手段</h3>
+<p>同解方程组问题
+证明r(A)&lt;=r(B) , 常用向量组证明
+证明r(A)=r(B)，可证明 Ax=0 与 Bx=0的零空间的维数一样，则进而可以证明r(A)=r(B)
+主要的证明手段 证明 r(A)=r(B)=r(A和B竖着拼起来)，即有效约束个数一样，没有增加新的新约束，即两个约束完全一样</p>
+<h3>3.8 施密特正交化</h3>
+<p>施密特正交化：
+- 原来有两个向量 a1,a2
+- 将其变为 p1,p2
+- 方法是 将原来的 a1直接当做p1, $p2=a2-\frac{(a2,p1)}{(p1,p1)}p1$</p>
+<h2>4 · 特征值与特征向量</h2>
+<blockquote>
+<p><strong>本节导航</strong>：4.1 特征多项式的求解技巧 ｜ 4.2 特征值 / 特征向量重要结论 ｜ 4.3 常用矩阵的特征值与特征向量 ｜ 4.4 几何重数 ≤ 代数重数</p>
+</blockquote>
+<p><mark>矩阵特征值，特征向量的定义</mark>
+- 只有非0列向量对应的$\lambda$才叫做特征值，意思是说如果一个$\lambda$被称为是特征值，则其对应的特征向量是非0的，即$(\lambda E-A)x=0$有非0解，行列式为0！！！！！
+- 矩阵有特征值，则$Ax=\lambda x$
+- 整理成方程 $(\lambda E-A)x=0$有解
+- 对于列向量的组合要求有非零解，即要求列向量线性相关，行列式为0
+- 对于秩1矩阵A，<strong>A的特征值为 tr(A),0,0</strong>
+- 矩阵的迹=对角线元素和=特征值和</p>
+<h3>4.1 特征多项式的求解技巧</h3>
+<ul>
+<li>
+<p>求解特征多项式的方法</p>
+<ul>
+<li>在展开的时候，有意展开为$\lambda$的因式</li>
+<li>如果已经直接直接展开为了多项式，$f(\lambda)=a_k\lambda^k+...+a_1\lambda+a_0$</li>
+<li>①看<mark>常数项</mark>，a0如果是0，则有一个根为0</li>
+<li>②若<mark>系数和</mark>为0，则有一个根为1</li>
+<li>③如果偶次项系数和=奇次项系数和，则有一个<mark>根为-1</mark></li>
+<li>④找到一个因式之后，使用多项式的代余除法</li>
+</ul>
+</li>
+<li>
+<p>定理，$f(\lambda)=\lambda^k+...+a_1\lambda+a_0$,系数都是整数，且最高项的系数为1，则这个方程的有理根都是整数，且<mark>都是a0的因子</mark>，所以可以找出a0有哪些因子，然后逐个试出来，一定能得到一个有理根！</p>
+</li>
+</ul>
+<h3>4.2 特征值 / 特征向量重要结论</h3>
+<p><mark>特征值，特征向量的重要结论</mark>：
+设 $A$ 为 $n$ 阶方阵，以下结论均默认特征值按代数重数计。</p>
+<ul>
+<li><strong>特征值与特征向量定义</strong>：若存在非零列向量 $x$ 与数 $\lambda$，使得 $Ax=\lambda x$，则 $\lambda$ 是 $A$ 的特征值，$x$ 是 $A$ 对应于 $\lambda$ 的特征向量。特征向量必须非零。</li>
+<li><strong>特征值由特征多项式决定，<mark>即当知道矩阵对应的特征值的时候，立即可得下面的等式</mark></strong>：
+  <div class="mathblock">$$
+  |\lambda E-A|=0
+  $$</div>
+  $n$ 阶矩阵在复数域内恰有 $n$ 个特征值（计重数）。</li>
+<li><mark>当知道某个值不是矩阵的特征值的时候，</mark><div class="mathblock">$$
+  |\lambda E-A|\neq0
+  $$</div></li>
+<li>
+<p><strong>特征值之和(等于矩阵的迹)与积(等于矩阵的行列式)</strong>：
+  <div class="mathblock">$$
+  \sum_{i=1}^{n}\lambda_i=\operatorname{tr}(A),\qquad
+  \prod_{i=1}^{n}\lambda_i=|A|
+  $$</div>
+  其中 $\operatorname{tr}(A)$ 是主对角线元素之和。</p>
+</li>
+<li>
+<p><strong>多项式的特征值</strong>：若 $\lambda$ 是 $A$ 的特征值，$f(x)$ 是多项式，则 $f(\lambda)$ 是 $f(A)$ 的特征值，且对应的特征向量相同。</p>
+</li>
+<li>
+<p><strong>可逆矩阵的相关特征值</strong>：若 $A$ 可逆，则其特征值全不为 $0$，且</p>
+</li>
+<li>$A^{-1}$ 的特征值为 $\dfrac{1}{\lambda}$；</li>
+<li>伴随矩阵 $A^*$ 的特征值为 $\dfrac{|A|}{\lambda}$；</li>
+<li>
+<p>同样对应相同的特征向量。</p>
+</li>
+<li>
+<p><strong>转置与相似</strong>：</p>
+</li>
+<li>$A$ 与 $A^T$ 的特征值完全相同，因为 $|\lambda E-A^T|=|\lambda E-A|$；</li>
+<li><mark>相似矩阵</mark> $A$ 与 $P^{-1}AP$ 的<mark>特征值完全相同</mark>，证明如下所示：<span class="fig"><img src="images/Pasted%20image%2020261028114012.png" style="" alt="图 10"><span class="cap">图 10 · 对应原笔记第 443 行</span></span></li>
+<li><strong>乘积的特征值</strong>：若 $A,B$ 是同阶方阵，则 $AB$ 与 $BA$ 的<mark>特征值完全相同；特征向量不同</mark>；若阶数不同，则它们的非零特征值相同。<ul>
+<li>阶数相同的情况下
+<span class="fig"><img src="images/Pasted%20image%2020260820120424.png" style="width:338px;" alt="图 11"><span class="cap">图 11 · 对应原笔记第 446 行</span></span></li>
+<li>阶数不同的情况下
+<span class="fig"><img src="images/Pasted%20image%2020260820120608.png" style="width:337px;" alt="图 12"><span class="cap">图 12 · 对应原笔记第 448 行</span></span></li>
+</ul>
+</li>
+<li><strong>不同特征值的特征向量线性无关</strong>：<mark>属于不同特征值的特征向量构成线性无关组。</mark></li>
+<li>同一个特征值(k重)对应的特征向量<mark>至多只有k个线性无关的特征向量</mark></li>
+</ul>
+<h3>4.3 常用矩阵的特征值与特征向量</h3>
+<p>常用矩阵特征值与特征向量：
+如果A的特征值是$\lambda$，特征向量是 x , 则$KA,A^k,f(A),A^{-1},A^{*},P^{-1}AP$的特征值，特征向量分别为 </p>
+<ul>
+<li>$kA$：特征值为 $k\lambda$，特征向量为 $x$（$k$ 为常数）</li>
+<li>$A^k$（$k$ 为正整数）：特征值为 $\lambda^k$，特征向量为 $x$</li>
+<li>$f(A)$（$f$ 为多项式）：特征值为 $f(\lambda)$，特征向量为 $x$</li>
+<li>$A^{-1}$（若 $A$ 可逆）：特征值为 $\dfrac{1}{\lambda}$，特征向量为 $x$</li>
+<li>$A^*$（若 $A$ 可逆）：特征值为 $\dfrac{|A|}{\lambda}$，特征向量为 $x$</li>
+<li>因为 $A^*x=|A|A^{-1}x=\dfrac{|A|}{\lambda}x$</li>
+<li>$P^{-1}AP$（$P$ 可逆）：<mark>特征值为 $\lambda$，特征向量为 $P^{-1}x$</mark></li>
+<li>因为 $(P^{-1}AP)(P^{-1}x)=P^{-1}Ax=\lambda P^{-1}x$</li>
+</ul>
+<p>注意：以上每个结论都保持<strong>同一个特征值对应的特征向量</strong>；对于 $A^{-1}$ 和 $A^*$，要求 $\lambda\neq0$。.)</p>
+<h3>4.4 几何重数 ≤ 代数重数</h3>
+<ul>
+<li><strong>重数关系</strong>：对任一特征值 $\lambda$，
+  <div class="mathblock">$$
+  \text{几何重数}=\dim(\ker(\lambda E-A))\le \text{代数重数}
+  $$</div>
+  几何重数是 $\lambda$ 对应特征子空间的维数，代数重数是 $\lambda$ 作为特征多项式根的重数。</li>
+</ul>
+<h2>5 · 相似与相似对角化</h2>
+<blockquote>
+<p><strong>本节导航</strong>：5.1 相似的性质与不变量 ｜ 5.2 相似对角化的条件 ｜ 5.3 判定相似的充分条件 ｜ 5.4 可对角化的充要条件 / 相似与等价的区别</p>
+</blockquote>
+<ul>
+<li>回顾矩阵的等价，A与B<mark>是同型矩阵</mark>，QAP=B，且Q和P是可逆矩阵</li>
+<li><mark>进一步得到相似</mark>，A，B是两个n阶方阵，存在可逆矩阵 $P,P^{-1}$使得$P^{-1}AP=B$ 则称A相似于B</li>
+</ul>
+<p>重要！！！
+<mark>对于相似的理解，矩阵A和矩阵B相似，表明，矩阵A和矩阵B代表同一个线性变换，只是使用的基不同</mark>
+同一个变换，在不同的基下有不同的 变换矩阵，如A，B，$P^{-1}APx=Bx$
+<span class="fig"><img src="images/Pasted%20image%2020260823170633.png" style="" alt="图 13"><span class="cap">图 13 · 对应原笔记第 480 行</span></span>
+对于<mark>将B作用在x上产生的结果</mark>，可以理解为上面的流程 ，即  $P^{-1}AP$分别作用在x上
+“相似”不是说两个矩阵的元素相似或数值接近，而是说它们具有相同的线性变换结构。
+A 与 B 不是在同一坐标系中直接比较作用，而是在不同坐标系中表示<mark>同一线性变换</mark>。</p>
+<ul>
+<li>若A与B相似，则A-E 与 B-E相似</li>
+</ul>
+<h3>5.1 相似的性质与不变量</h3>
+<p>有关于矩阵相似的重要结论：
+- <strong>相似的基本性质</strong>：
+  - <strong>自反性</strong>：$A\sim A$；
+  - <strong>对称性</strong>：若 $A\sim B$，则 $B\sim A$；
+  - <strong>传递性</strong>：若 $A\sim B$ 且 $B\sim C$，则 $A\sim C$。</p>
+<ul>
+<li><strong>相似不变量</strong>：若 $A\sim B$，则下列量完全相同：</li>
+<li><strong>行列式</strong>：$|A|=|B|$；</li>
+<li><strong>秩</strong>：$r(A)=r(B)$；</li>
+<li><strong>迹</strong>：$\operatorname{tr}(A)=\operatorname{tr}(B)$；</li>
+<li><strong>特征多项式</strong>：$|\lambda E-A|=|\lambda E-B|$，因此特征值完全相同；</li>
+<li>
+<p><strong>特征值的代数重数相同</strong>，且对每个特征值，几何重数 $\dim\ker(\lambda E-A)$ 也相同；</p>
+</li>
+<li>
+<p><strong>若 $A$ 可逆，则 $B$ 也可逆</strong>，且 $A^{-1}\sim B^{-1}$。</p>
+</li>
+<li>
+<p><strong>相似关系的常见运算</strong>：</p>
+</li>
+<li>若 $A\sim B$，则 $A^T\sim B^T$；</li>
+<li>若 $A\sim B$，则 $A^k\sim B^k$（$k$ 为正整数),<ul>
+<li>证明：已知$P^{-1}AP=B$两边自乘 $P^{-1}A^{2}P=B^{2}$</li>
+</ul>
+</li>
+<li>若 $A\sim B$，则 $f(A)\sim f(B)$（$f$ 为多项式）；</li>
+<li>若 $A\sim B$ 且 $A$ 可逆，则 $A^{-1}\sim B^{-1}$；</li>
+<li>若 $A\sim B$，则 $A^*\sim B^*$（伴随矩阵）；</li>
+<li>若 $A\sim B$，则 $A+cE\sim B+cE$（$c$ 为常数），特别地 $A-E\sim B-E$。</li>
+<li>分块矩阵：如果A与C相似，B与D相似，则满足$\begin{pmatrix}A&0\\0&B\end{pmatrix}$与$\begin{pmatrix}C&0\\0&D\end{pmatrix}$相似</li>
+<li>使用传递性证明两个矩阵相似，如果A相似与某个对角矩阵，B也相似于这个对角矩阵，则A与B相似</li>
+</ul>
+<h3>5.2 相似对角化的条件</h3>
+<ul>
+<li>区分矩阵相似与相似对角化，两个矩阵相似只要求两个矩阵同阶，但是相似对角化是，<mark>将一个矩阵通过手段，变化成一个对角阵</mark>
+  下面将相似对角化与特征值联系起来！！</li>
+<li>相似对角化的过程是矩阵A，通过$P^{-1}AP$的作用变成一个对角阵，又因为变换前和变换后的特征值是一样的，所以就是将特征值显露出来的过程。<mark>可以想到求A的特征值，得到对角阵，特征值对应的特征向量拼成矩阵P</mark><ul>
+<li>所以，一个矩阵可相似对角化的要求是，<mark>矩阵要有n个线性无关的特征向量</mark>，要求线性无关是因为作用手段是$P,P^{-1}$</li>
+<li>即，每个k重特征值都对应k个线性无关的特征向量</li>
+<li><mark>n阶实对称矩阵可相似对角化？</mark><ul>
+<li>因为实对称矩阵一定有n个无关的特征向量，实对称矩阵不同特征值对应特征向量相互正交</li>
+<li>因为<mark>实对称矩阵k重特征值对应的k个特征向量线性无关</mark>！，所以对称矩阵一定能相似对角化</li>
+</ul>
+</li>
+<li>$A^T$的特征值和特征向量与A的特征值特征向量的关系是？</li>
+<li>特征值相同，特征向量不同</li>
+<li>如果一个矩阵的所有特征向量相互正交，则该矩阵为对称矩阵，证明，根据题意，有$Q^{T}AQ=\Lambda$，$A=Q\Lambda Q^{T}$,然后得到结论，A是对称矩阵</li>
+</ul>
+</li>
+</ul>
+<p>对于一个普通的矩阵需要判断能不能相似对角化，即判断有没有n个线性无关的特征向量
+对于 对称矩阵 一定能相似对角化，且一定有正交矩阵 使其 对角化，相比普通矩阵(没有正交矩阵能使其对角化)，只能有可逆矩阵使其对角化，也很好理解，本来不同特征值对应的向量已经相互正交了，通过正交化使得k重特征值对应的特征向量相互正交即可！</p>
+<h3>5.3 判定相似的充分条件</h3>
+<p>判断两个矩阵是不是相似，相似的性质都是必要条件，<mark>充分条件要么使用定义要么使用传递性证明</mark></p>
+<h3>5.4 可对角化的充要条件 / 相似与等价的区别</h3>
+<p><mark>矩阵越乘秩越不大，但是乘可逆矩阵不会改变矩阵的秩</mark>
+- <strong>相似对角化的重要结论</strong>：
+  - $A$ 可对角化，即 $A\sim\Lambda$（$\Lambda$ 为对角阵），<mark>当且仅当</mark> $A$ 有 $n$ 个线性无关的特征向量；
+  - 若 $A$ 的<mark>每个特征值的几何重数都等于其代数重数</mark>，则 $A$ 可对角化；
+  - 属于不同特征值的特征向量线性无关，因此若 $A$ 有 $n$ 个互不相同的特征值，则 $A$ 一定可对角化；
+  - 若 $A$ 可对角化，则 $\Lambda$ 的主对角线元素恰好是 $A$ 的特征值，且
+<div class="mathblock">$$
+    P^{-1}AP=\Lambda=\operatorname{diag}(\lambda_1,\lambda_2,\dots,\lambda_n)
+    $$</div>
+    其中 $P$ 的列向量是与 $\lambda_i$ 对应的特征向量。</p>
+<ul>
+<li><strong>相似与等价的区别</strong>：</li>
+<li>等价只要求 $QAP=B$，其中 $Q,P$ 可逆，$A,B$ <mark>可以不同型；</mark>相似要求 $P^{-1}AP=B$，$A,B$ 必须是同阶方阵；</li>
+<li>等价关注的是秩相同，相似关注的是特征值、迹、行列式等更精细的代数结构；</li>
+<li>相似蕴含等价，但等价不蕴含相似。</li>
+</ul>
+<h2>6 · 二次型与正定</h2>
+<blockquote>
+<p><strong>本节导航</strong>：6.1 惯性定理 ｜ 6.2 配方法化标准形 / 正交变换法 ｜ 6.3 正定二次型及判别</p>
+</blockquote>
+<p>二次型
+- 二次型是将相似理论应用在一个重要的研究对象上，即 二次齐次式
+- <mark>为保证唯一性</mark>，将二次齐次式用<mark>对称矩阵</mark>表示
+- 前面讲过<mark>实对称矩阵一定能相似对角化</mark>
+- 二次型f(x)的秩 = 其系数矩阵的秩</p>
+<ul>
+<li><mark>线性变换</mark>，对于n元二次型，$f(x_1,x_2,x_3,x_4......x_n)$, 线性变换如下所示，即，将x用y的线性组合来表示
+$x_1=c_{11}y_1+c_{12}y_2+...+c_{1n}y_n$
+$x_2=c_{21}y_1+c_{22}y_2+...+c_{2n}y_n$
+$x_n=c_{n1}y_1+c_{n2}y_2+...+c_{nn}y_n$</li>
+<li>使用$C表示系数矩阵$ 即表示为 $x=Cy$ , <mark>如果C可逆，则称为可逆线性变换，</mark>
+对于<mark>变换前</mark>$f(x)=x^{T}Ax$ 以及 <mark>变换后</mark> $g(y)=y^{T}By$
+对于<mark>系数矩阵</mark> 有如下的关系$B=C^{T}AC$，称这种关系为合同关系，对应的二次型称为合同二次型
+注意合同这种关系是在<mark>可逆的前提下</mark>进行的，而可逆变换本身不改变矩阵的秩，所以合同的两个矩阵，的秩一样</li>
+</ul>
+<p>与对称矩阵合同的一定是对称矩阵，<mark>在做题的时候注意识别对称矩阵！</mark>
+二次型的标准型，<mark>只含有平方项，没有交叉项的二次型</mark>称为标准型
+在标准型的基础上，如果系数只有-1,0,1则称为规范型</p>
+<ul>
+<li>任何实对称矩阵，一定能通过合同变换变为对角矩阵，<mark>即任何有交叉项的二次型，都能通过换元变为没有交叉项的二次型！</mark></li>
+<li>任何实对称矩阵，也可以通过正交变换化为对角阵</li>
+</ul>
+<h3>6.1 惯性定理</h3>
+<p>惯性定理：
+合同变换下的不变量是正负惯性指数，指的是化成标准型之后其正项个数，负项个数不变
+在<mark>对称阵</mark>的前提下，两个矩阵相似(特征值一样)，两个矩阵一定合同(正负惯性指数相同)
+在使用配方法的时候，<mark>得到的手段C</mark> 使得 $C^{T}AC=\Lambda$ , 这个C只满足可逆，而不是正交矩阵，即不一定满足$C^{-1}=C^{T}$</p>
+<hr />
+<h3>6.2 配方法化标准形 / 正交变换法</h3>
+<p>使用配方法化二次型为标准形，规范形，若有平方项，应将平方项及其有关混合项 配成完全平方
+如果没有平方项，则 需要做两次变换，先令 x=Cy ，将原来使用x表示的式子使用y进行表示，此时化出了平方项，第二次变换，令 y=Qz , 将原来使用y表示的带有平方项和混合项的式子 配方成只含有 平方项。</p>
+<p>如下所示，使用配方法，原来使用x表示二次型，通过换元之后使用y表示二次型，对应系数相等得到系数矩阵：
+<span class="fig"><img src="images/Pasted%20image%2020261029193925.png" style="" alt="图 14"><span class="cap">图 14 · 对应原笔记第 580 行</span></span></p>
+<p>使用正交变换法得到的标准型形如：
+$\lambda_1(y_1)^{2}+\lambda_2(y_2)^{2}+\lambda_3(y_3)^{2}+.....$
+即，正交变换只能化二次型为标准形，而不能化为规范形，除非特征值都属于{-1,1,0}</p>
+<h3>6.3 正定二次型及判别</h3>
+<p>正定二次型
+- 凡是正定二次型，在三维空间中是抛物面形状，用z=1去截，截成的是一个封闭曲面
+- 在四维空间中，用z=1去切，切成的是一个椭球面类图形</p>
+<p>正定二次型及其判别，对于n元二次型，$f(x_1,x_2,....,x_n)=x^{T}Ax$若对任意的 列向量x（x不是全零的） , 均有
+$x^{T}Ax>0$ 则称$f$为<mark>正定二次型，</mark>，对应的矩阵为正定矩阵
+这里正定矩阵定义是严格大于0的 ， 半正定是$\ge$ , 同理还有负定，半负定矩阵</p>
+<p>正定二次型的特点，令多项式右侧为0，其<mark>反映出的几何图形是封闭的</mark></p>
+<p>判定二次型A正定的<mark>充要条件：</mark>
+- f的正惯性指数为n ， 意味着系数全正，特征值全正
+- 存在一个可逆矩阵D ，$A=D^{T}D$
+- A与单位阵 合同
+- A的每个特征值都大于零
+- A的全部顺序主子式大于零----<mark>可以用于快捷判断某一个矩阵是不是正定矩阵！</mark></p>
+<p><mark>必要条件</mark>，即已知一个矩阵是正定矩阵，则一定有：行列式大于0，矩阵的<mark>主对角线元素$a_{ii}>0$</mark>
+证明方式：因为已知矩阵是正定的了，所以 可以构造特殊的$x={(1,0,0,0,0.....)}$ , $x^{T}Ax$ 将矩阵A中的对角线的元素提取出来，进而得到对角线元素为正的结论。</p>
+<h2>7 · 专题补遗：分块矩阵、秩与例题图组</h2>
+<blockquote>
+<p><strong>本节导航</strong>：7.1 分块三角矩阵的秩 ｜ 7.2 880 矩阵部分回顾（图组） ｜ 7.3 实反对称矩阵与选择题排除依据 ｜ 7.4 二次型换元、合同与可逆判定</p>
+</blockquote>
+<ul>
+<li><strong>幂等矩阵</strong>：若 $A^2=A$，则特征值只能是 $0$ 或 $1$。</li>
+</ul>
+<p>A和B相似，B的特征向量不一定是A的特征向量
+B的特征向量乘$P^{-1}$才是A的特征向量即 $P^{-1}\beta$</p>
+<h3>7.1 分块三角矩阵的秩</h3>
+<ul>
+<li>对于下三角与上三角，当知道对角线上某个矩阵可逆的时候，<mark>整体的秩等于对角线上矩阵秩相加</mark>
+当 A 可逆时，非对角块 B 或 C 可以通过初等变换消掉，因此矩阵相当于：情况③，即对角阵</li>
+<li>不知道可逆的时候，整体的秩大于等于 对角线上矩阵秩的和
+<strong>这里是直接给出4个矩阵拼到一起，判断秩的情况</strong>
+②中A可逆的效果与D可逆效果一样，本质都是通过倍加消去非对角线上的矩阵
+④中的情况是矩阵A的独立列和矩阵D的独立列分别至少贡献了r(A)和r(D)
+<span class="fig"><img src="images/Pasted%20image%2020260901082245.png" style="" alt="图 15"><span class="cap">图 15 · 对应原笔记第 618 行</span></span>
+<span class="fig"><img src="images/Pasted%20image%2020260901082823.png" style="width:357px;" alt="图 16"><span class="cap">图 16 · 对应原笔记第 619 行</span></span></li>
+</ul>
+<h3>7.2 880 矩阵部分回顾（图组）</h3>
+<p>880 矩阵部分，回顾：
+<span class="fig"><img src="images/Pasted%20image%2020260901082909.png" style="" alt="图 17"><span class="cap">图 17 · 对应原笔记第 622 行</span></span></p>
+<p>下面是<mark>使用分块矩阵行列变换，进行化简</mark>，化为，<strong>对角阵</strong>或者<strong>主对角线上下三角</strong>
+<span class="fig"><img src="images/Pasted%20image%2020260901084129.png" style="width:412px;" alt="图 18"><span class="cap">图 18 · 对应原笔记第 625 行</span></span></p>
+<ul>
+<li><mark>利用反对称矩阵的性质</mark>进行分块阵的化简
+<span class="fig"><img src="images/Pasted%20image%2020260901085330.png" style="width:527px;" alt="图 19"><span class="cap">图 19 · 对应原笔记第 628 行</span></span></li>
+</ul>
+<h3>7.3 实反对称矩阵与选择题排除依据</h3>
+<p><mark>新知识</mark> 
+不考虑虚数的情况！
+A 是实反对称矩阵，则其特征值只能是 0
+即如果存在$Aa=\lambda a$ , $a$不为零向量，$\lambda$只能为0
+如果存在$Aa=\lambda a$，其中$\lambda$不为0，$a$只能是0向量
+<span class="fig"><img src="images/Pasted%20image%2020260903152958.png" style="" alt="图 20"><span class="cap">图 20 · 对应原笔记第 635 行</span></span>
+- 如果一个矩阵A合同于实对称矩阵，则A本身也是对称矩阵，<mark>选择题重要判断排除依据</mark>
+- 如果A相似于对角阵，则A的特征值与对角阵的特征值一样，又因为对角阵的k重特征根对应特征向量线性无关，所以k重特征根对应的零空间为k,即 $\lambda E-B=0$ 的零空间有k维度，即r($\lambda E-B$)=n-k
+- 如果A相似于B，则A与B的秩相同，因为可逆变换不改变矩阵的秩
+- 如果A相似于B，则$\lambda E-A$相似于$\lambda E-B$，其中$\lambda$任意 ,进而得到$r(\lambda E-B)=r(\lambda E-A)$,为相似的必要条件，选择题判断方便！</p>
+<h3>7.4 二次型换元、合同与可逆判定</h3>
+<p>二次型：
+按照拉格朗日配方法的规则做的变换一定是可逆变换，
+如果不是按此规则，则不保证变换的可逆性
+除了将式子展开，还可以利用题目给出的变换，只需保证所使用的变换矩阵的可逆性即可：
+<span class="fig"><img src="images/Pasted%20image%2020260911190638.png" style="width:326px;" alt="图 21"><span class="cap">图 21 · 对应原笔记第 645 行</span></span>
+相当于原来二次型是$y_1^2+y_2^2+y_3^2$，通过换元变成题目中的，只要保证是可逆变换就行</p>
+<p>两个矩阵合同和两个矩阵正负惯性指数相同是各自的什么条件？
+是充要条件，<mark>即这两个是同一件事的不同表述</mark>
+对应上面，变化前后的系数矩阵是合同关系！
+而可逆的换元一定是合同变换，所以得到，<mark>换元的矩阵只需要是可逆的即可！</mark></p>
+<p>合同判定：
+ - 判断矩阵A能不能通过正交变换变为B，暗含A与B相似，可先使用相似的性质进行预判！
+ - 合同变换的要求更低，可以将两个矩阵分别配方，如果正负惯性指数相同的话，则一定能通过<mark>凑系数的方式(手段)</mark>，实现合同变换
+ - 矩阵正定的必要条件，$a_{i,i}>0$</p>
+<p>可逆判定：
+- 下面成立能推出A可逆，从反证角度可证明
+    <span class="fig"><img src="images/Pasted%20image%2020260913165153.png" style="" alt="图 22"><span class="cap">图 22 · 对应原笔记第 660 行</span></span>
+    假设A不可逆，则Ax=0的解空间<mark>维度不为0</mark>，取C为解空间内的一个向量，r(C)!=0 , AC=0,r(AC)=0.所以与前提矛盾
+- A可逆能推出$A^TA$正定，证明如下：
+- 即证 对于非0的x有 $x^TA^TAx>0$
+- 即证 $(Ax)^TAx>0$成立
+- 即 $||Ax||^2$
+- 由于x不是0向量，$Ax$不为0，恒大于0成立</p>
+<h2>8 · 多项式 f(A) 与特征值</h2>
+<blockquote>
+<p><strong>本节导航</strong>：8.1 f(A)=0 ⇒ f(λ)=0 的单向性 ｜ 8.2 分块矩阵的转置与逆（速查图） ｜ 8.3 等价向量组与分块矩阵的秩 ｜ 8.4 矩阵方程的化简：列满秩 / 行满秩 ｜ 8.5 有关秩的结论（图组）</p>
+</blockquote>
+<p>问题：
+f(A)=3E , 设A的特征值为$\lambda$ 则 f($\lambda$)=3?证明如下。</p>
+<p><div class="mathblock">$$
+f(t)=a_0+a_1t+a_2t^2+\cdots+a_mt^m,
+$$</div></p>
+<p><div class="mathblock">$$
+f(A)=a_0E+a_1A+a_2A^2+\cdots+a_mA^m.
+$$</div></p>
+<p>由于</p>
+<p><div class="mathblock">$$
+Ax=\lambda x,
+$$</div></p>
+<p>所以</p>
+<p><div class="mathblock">$$
+A^2x=\lambda^2x,\qquad \ldots,\qquad A^mx=\lambda^mx.
+$$</div></p>
+<p>因此</p>
+<p><div class="mathblock">$$
+\begin{aligned}
+f(A)x
+&=\left(a_0E+a_1A+\cdots+a_mA^m\right)x\\
+&=\left(a_0+a_1\lambda+\cdots+a_m\lambda^m\right)x\\
+&=f(\lambda)x.
+\end{aligned}
+$$</div></p>
+<p>另一方面，题设给出</p>
+<p><div class="mathblock">$$
+f(A)=3E,
+$$</div></p>
+<p>所以</p>
+<p><div class="mathblock">$$
+f(A)x=3Ex=3x.
+$$</div></p>
+<p>比较两式：</p>
+<p><div class="mathblock">$$
+f(\lambda)x=3x.
+$$</div></p>
+<p>由于 <div class="mathblock">$$x\ne 0$$</div>，因此</p>
+<p><div class="mathblock">$$
+\boxed{f(\lambda)=3}.
+$$</div></p>
+<h3>8.1 f(A)=0 ⇒ f(λ)=0 的单向性</h3>
+<p>$f(A)=0->f(\lambda)=0;$
+$f(\lambda)=0->f(A)=0 ?$ <mark>不成立！</mark>，需要额外的条件
+如果$f(\lambda)的映射关系为|\lambda E-A|,则成立$，如下所示：
+<span class="fig"><img src="images/Pasted%20image%2020261030101112.png" style="" alt="图 23"><span class="cap">图 23 · 对应原笔记第 730 行</span></span></p>
+<h3>8.2 分块矩阵的转置与逆（速查图）</h3>
+<p>分块矩阵的转置：
+<span class="fig"><img src="images/Pasted%20image%2020260914154438.png" style="" alt="图 24"><span class="cap">图 24 · 对应原笔记第 733 行</span></span>
+分块矩阵的逆：
+<span class="fig"><img src="images/Pasted%20image%2020260914154559.png" style="" alt="图 25"><span class="cap">图 25 · 对应原笔记第 735 行</span></span>
+<span class="fig"><img src="images/Pasted%20image%2020260914154746.png" style="" alt="图 26"><span class="cap">图 26 · 对应原笔记第 736 行</span></span>
+对于<mark>主对角线</mark>：主对角线求逆，<mark>左乘同行，右乘同列，添负号</mark>
+对于<mark>副对角线</mark>：副对角线求逆，其余两个<mark>位置互换</mark>，左乘同行，右乘同列，然后添负号
+<span class="fig"><img src="images/Pasted%20image%2020260914155039.png" style="" alt="图 27"><span class="cap">图 27 · 对应原笔记第 739 行</span></span></p>
+<h3>8.3 等价向量组与分块矩阵的秩</h3>
+<p><mark>注意下面是向量组表示的判断——等价向量组</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260914155442.png" style="" alt="图 28"><span class="cap">图 28 · 对应原笔记第 741 行</span></span>
+<span class="fig"><img src="images/Pasted%20image%2020260914155630.png" style="" alt="图 29"><span class="cap">图 29 · 对应原笔记第 742 行</span></span>
+行向量组等价的充要条件是 三秩相同
+$A^TA$的行向量组与A的行向量组等价，因为同解，约束相同，行秩相同</p>
+<p>矩阵同解的充要条件：A，B，A和B竖着拼 三秩相同</p>
+<p>对于分块矩阵的秩，横拼的时候看列，竖拼的时候看行
+ <span class="fig"><img src="images/Pasted%20image%2020260914162105.png" style="" alt="图 30"><span class="cap">图 30 · 对应原笔记第 749 行</span></span>
+ 对于该题目A选项，横拼，看列向量，可得AB每一个列向量都是A的列向量的线性组合。
+ 对于B选项，看列，是A与B的列向量的混合。</p>
+<p><mark>更本质的理解</mark>，横着拼，本质是列向量的叠加，所以拼完之后会不会增加秩关键看有没有产生新的列！
+所以横拼看列！！</p>
+<p>同理如果是两个矩阵竖着拼，核心是看行向量，看有没有增加新的行向量</p>
+<h3>8.4 矩阵方程的化简：列满秩 / 行满秩</h3>
+<p><mark>求解矩阵方程：化简方式：</mark>
+如果$CA=CB$ , <mark>!关键字C列满秩!</mark>，则$CA-CB=0$,即$C(A-B)=0$，又由于$CX=0$只有0解，所以A=B
+如果$AC=BC$, <mark>!C行满秩!</mark>，则$AC-BC=(A-B)C=0$, 如果对于行满秩的C来说，仅当$A-B$的每一行都为0的时候，才满足，所以A=B <span class="fig"><img src="images/Pasted%20image%2020260914173831.png" style="" alt="图 31"><span class="cap">图 31 · 对应原笔记第 760 行</span></span></p>
+<p>$B^2=A$求B的方法
+<span class="fig"><img src="images/Pasted%20image%2020260914174309.png" style="" alt="图 32"><span class="cap">图 32 · 对应原笔记第 763 行</span></span></p>
+<h3>8.5 有关秩的结论（图组）</h3>
+<p><mark>有关秩的结论</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260914181156.png" style="" alt="图 33"><span class="cap">图 33 · 对应原笔记第 768 行</span></span>
+理解方式，对于列满秩从零空间相同的角度理解；<mark>对于任意矩阵，行秩等于列秩</mark>
+对于行满秩，两边同时取转置，
+具体为，要证明$r(AB)=r(A)$
+即证明：$r(B^TA^T)=r(A^T)$
+又因为$B^T$是列满秩的，所以$B^TA^T$与$A^T$零空间一样，所以秩一样
+<span class="fig"><img src="images/Pasted%20image%2020260914181647.png" style="" alt="图 34"><span class="cap">图 34 · 对应原笔记第 774 行</span></span>
+<span class="fig"><img src="images/Pasted%20image%2020260914181751.png" style="" alt="图 35"><span class="cap">图 35 · 对应原笔记第 775 行</span></span>
+⑧⑨说明了矩阵相乘的秩会减少但是这个减少是有下界的
+<span class="fig"><img src="images/Pasted%20image%2020260914182421.png" style="" alt="图 36"><span class="cap">图 36 · 对应原笔记第 777 行</span></span>
+对于12的理解：
+若 AB=O，则 r(A)+r(B)≤A的列数 的特殊情况！
+进一步
+<span class="fig"><img src="images/Pasted%20image%2020260916113328.png" style="" alt="图 37"><span class="cap">图 37 · 对应原笔记第 781 行</span></span>
+对于16的理解：
+意思是如果A可相似对角化，则n重特征值一定对应n个线性无关的特征向量----即特征值的重数=对应特征方程零空间的维数</p>
+<h2>9 · 方程组专题：公共解与同解</h2>
+<blockquote>
+<p><strong>本节导航</strong>：9.1 公共解 ｜ 9.2 同解 ｜ 9.3 行空间视角 ｜ 9.4 证明题思路与特征值转化</p>
+</blockquote>
+<p>线性方程组理论总结：
+对于下面的齐次方程组:
+<span class="fig"><img src="images/Pasted%20image%2020260915090632.png" style="" alt="图 38"><span class="cap">图 38 · 对应原笔记第 789 行</span></span>
+- 有解$\beta$ , 则系数向量$\alpha*\beta=0$即系数与解是正交的
+- 齐次解垂直于约束行向量张成的空间</p>
+<h3>9.1 公共解</h3>
+<p>矩阵公共解问题：
+- 两种情况，对于<mark>齐次的公共解问题</mark>，<mark>将约束竖着拼起来</mark>，要求总的有效约束(秩)小于n，就有非零解，即有公共解
+- 对于非齐次的公共解问题Ax=b与Cx=b，核心看列相容，将C的列添加到A中，增加新的列之后求解，如果有解，即为公共解？(❌️)
+- (✅️)仍然是竖拼，使得约束变多，而自变量不变，运算结果为b和d的竖拼结果！
+<span class="fig"><img src="images/Pasted%20image%2020261029212453.png" style="width:406px;" alt="图 39"><span class="cap">图 39 · 对应原笔记第 797 行</span></span>
+<span class="fig"><img src="images/Pasted%20image%2020261029212622.png" style="width:409px;" alt="图 40"><span class="cap">图 40 · 对应原笔记第 798 行</span></span>
+同一个公共解x，乘矩阵能得到两个对应的解
+<mark>公共解典型例题：</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260915121547.png" style="" alt="图 41"><span class="cap">图 41 · 对应原笔记第 801 行</span></span></p>
+<hr />
+<h3>9.2 同解</h3>
+<p>同解比公共解要求更多，两个矩阵同解，两个矩阵一定有公共解！
+矩阵同解问题：
+- <strong>齐次方程组同解</strong>
+- 三秩相同--内部体现的是两个矩阵的约束相同
+    <span class="fig"><img src="images/Pasted%20image%2020260915114417.png" style="width:172px;" alt="图 42"><span class="cap">图 42 · 对应原笔记第 811 行</span></span>
+- 即 两个矩阵的行向量组等价，即行空间相同
+- 行空间相同的判定：
+    B的每行都是A的行向量的线性组合，A的每行都是B的行向量的线性组合；即存在矩阵PQ,使得B=PA (用A的行表示B的每一行)，A=QB(用B的行表示A的每一行)
+<mark>矩阵同解典型例题</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260915121450.png" style="" alt="图 43"><span class="cap">图 43 · 对应原笔记第 816 行</span></span>
+！！！
+- <strong>非齐次方程组同解</strong>，即解集一样，所以齐次同解(对应③的后半部分)，非齐次有公共解对应(③的前半部分)
+- 等价条件是，两个<mark>非齐次方程组对应的齐次方程组同解，且非齐次方程有公共解</mark><span class="fig"><img src="images/Pasted%20image%2020261030092838.png" style="" alt="图 44"><span class="cap">图 44 · 对应原笔记第 819 行</span></span><span class="fig"><img src="images/Pasted%20image%2020260915143713.png" style="" alt="图 45"><span class="cap">图 45 · 对应原笔记第 819 行</span></span></p>
+<h3>9.3 行空间视角</h3>
+<p>对于行空间的理解：
+行空间是行向量张成的空间，对于齐次方程每行是一个约束，<mark>解就是满足约束，即与每个行正交的向量集合</mark></p>
+<p>对于非齐次方程组，通过内积，将原来的矩阵改写：
+<span class="fig"><img src="images/Pasted%20image%2020260915160245.png" style="width:199px;" alt="图 46"><span class="cap">图 46 · 对应原笔记第 825 行</span></span>
+此时的增广矩阵的行空间就是约束,变为<mark>齐次方程同解</mark>问题了!!
+增广之后的两个矩阵行空间一样r(ext_A)=r(ext_B)=r(ext_A竖拼ext_B)</p>
+<p>所以这也就解释了非齐次方程组同解 的<strong>等价条件是</strong> 增广后的行空间相同，因为行空间等价能推出解空间相同</p>
+<p>对于第二问的解答，可以使用增广矩阵<mark>行空间等价</mark>，得到三秩相同，由于第一问条件已经知道三秩中的两秩相同了只需满足其余两秩相同
+<span class="fig"><img src="images/Pasted%20image%2020260915180249.png" style="" alt="图 47"><span class="cap">图 47 · 对应原笔记第 832 行</span></span></p>
+<h3>9.4 证明题思路与特征值转化</h3>
+<p>向量组：
+- 证明思路：证明秩等式---用齐次方程组同解，矩阵零空间一样，进而得到矩阵秩一样
+- 证明秩不等式---使用别表示的秩不大来证明</p>
+<ul>
+<li>证明向量组等价---两秩相同且可单方表出，三秩相同
+特征值部分：</li>
+<li>转换等价表述： </li>
+<li>$\lambda_0是A的特征值$---&gt;|$\lambda_0E-A$|=0</li>
+<li>
+<p>$\lambda_0不是A的特征值$---&gt;|$\lambda_0E-A$|!=0 , 即矩阵可逆</p>
+</li>
+<li>
+<p>$A^T与A$的特征值一样，但是特征向量不同，究其原因是一个要解$(\lambda E-A)x=0 , 另一个要解 (\lambda E-A^T)x=0$</p>
+</li>
+</ul>
+<p>证明题思路：
+<span class="fig"><img src="images/Pasted%20image%2020260916083943.png" style="width:370px;" alt="图 48"><span class="cap">图 48 · 对应原笔记第 847 行</span></span></p>
+<p>思路：将已知向题目所给的形式去凑，<mark>所谓“凑”的方向性！</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260916084236.png" style="width:459px;" alt="图 49"><span class="cap">图 49 · 对应原笔记第 852 行</span></span>
+根据$f(A)=0->f(\lambda)=0->得到的是\lambda的取值范围$，而不是一定要取的
+<span class="fig"><img src="images/Pasted%20image%2020260916084824.png" style="width:470px;" alt="图 50"><span class="cap">图 50 · 对应原笔记第 854 行</span></span></p>
+<h2>10 · 特征值与相似理论进阶</h2>
+<blockquote>
+<p><strong>本节导航</strong>：10.1 矩阵乘法与 AB=0 的本质 ｜ 10.2 每行元素和为 k 的结论 ｜ 10.3 可对角化的充分 / 必要 / 否定条件 ｜ 10.4 谱分解 ｜ 10.5 相似判断题与传递性 ｜ 10.6 正交矩阵与正定矩阵对照 ｜ 10.7 伴随矩阵相关的特殊结论 ｜ 10.8 判断两个非对称阵是否相似 ｜ 10.9 二次型典型题（图组） ｜ 10.10 合同判定与幂等矩阵</p>
+</blockquote>
+<p>特征向量：
+<span class="fig"><img src="images/Pasted%20image%2020260916091028.png" style="width:383px;" alt="图 51"><span class="cap">图 51 · 对应原笔记第 858 行</span></span>
+对于⑤的证明：假设不同特征值对应特征向量组合仍是原矩阵特征向量；设其特征值为$\lambda$，展开之后由于不同特征值对应的特征向量线性无关，组合系数应为0，所以两个特征值相同，矛盾
+<span class="fig"><img src="images/Pasted%20image%2020260916091718.png" style="" alt="图 52"><span class="cap">图 52 · 对应原笔记第 860 行</span></span></p>
+<p>如果A只有一个线性无关的特征向量，对应$\lambda$是n重根</p>
+<p>已有k个无关特征向量时，$\lambda$至少是k重根 </p>
+<p>n阶矩阵满足AB=BA，且A有n个互不相同的特征值，则A的特征向量都是B的特征向量
+证明如下：
+<span class="fig"><img src="images/Pasted%20image%2020260916092837.png" style="" alt="图 53"><span class="cap">图 53 · 对应原笔记第 868 行</span></span>
+注意题目条件中的n个互不相同的特征值，指的意思就是特征值是单根，<mark>这样</mark>A的属于同一个特征值的特征向量线性相关；如果特征值是重根，就不满足同一个特征值对应特征向量相关了，即推不出上图中的②结论</p>
+<hr />
+<p><span class="fig"><img src="images/Pasted%20image%2020260916093711.png" style="" alt="图 54"><span class="cap">图 54 · 对应原笔记第 874 行</span></span>
+这里的n是A的列数</p>
+<h3>10.1 矩阵乘法与 AB=0 的本质</h3>
+<p>加深对于矩阵乘法的理解：
+<span class="fig"><img src="images/Pasted%20image%2020260916094932.png" style="" alt="图 55"><span class="cap">图 55 · 对应原笔记第 879 行</span></span>
+这里AB=0，所以B的每一列都在Ax=0的零空间里面
+即每个都是特征值0对应的特征向量</p>
+<p>对于AB=C , 且C中的每个列向量，都可以写成B中的列向量的特征值倍，则B中的每个列向量都是A的特征向量</p>
+<h3>10.2 每行元素和为 k 的结论</h3>
+<p>核心：！
+- 已知A可逆且A的每行元素之和均为k,则能推出$A^{-1}$的
+每行元素之和为$\frac{1}{k}$
+- 若A的每行元素之和为k , 则$A^n$的每行元素之和为$k^n$
+- 同理如果A的每行元素之和为k，f(A)的每行元素之和为f(k)
+- 上面成立还因为共享同一个特征向量</p>
+<p>核心！
+A与A+E有相同的特征向量！
+A相似于B
+A-E相似于B-E</p>
+<h3>10.3 可对角化的充分 / 必要 / 否定条件</h3>
+<p>相似理论：
+- 实对称矩阵一定能通过正交矩阵相似对角化
+- 非实对称矩阵一定不能通过正交矩阵相似对角化</p>
+<p>充分条件：
+- 如果$A^k=E$ 则<mark>A可相似对角化</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260916113328.png" style="" alt="图 56"><span class="cap">图 56 · 对应原笔记第 903 行</span></span>
+- 只需知道结论，无需证明
+- <mark>如果r(A)=1, 且tr(A)！=0，则A可相似对角化</mark>，因为秩为1，所以零空间为n-1维，正好就是0特征值对应的特征向量空间，所以重根对应的特征向量线性无关</p>
+<ul>
+<li>必要条件</li>
+<li>
+<p>如果A可相似对角化，r(A)=r($\Lambda$) , A的秩等于非零特征值的个数=正惯性  指数指数+负惯性指数之和</p>
+</li>
+<li>
+<p>否定条件</p>
+</li>
+<li>$A^k=0$ , <mark>推出A不可相似对角化</mark> (证明，可以得到$\lambda^k=0$)，所以$\lambda$只能为0，但是前提A不是0矩阵，所以A特征空间最多n-1维，所以n重特征值0找不到n个线性无关的特征向量，所以A不能相似对角化</li>
+<li>A的特征值全为k,但是A$\neq$kE ,推出 A不可相似对角化，A只有等于KE的时候，特征值k对应的几何重数才为n，也可以使用<mark>反证法，假设A不是kE,然后将A相似对角化，然后反求出A，得到A=kE</mark></li>
+</ul>
+<p>实对称矩阵一定能相似对角化一定有三个相互正交的特征向量
+，所以下面的命题互为充要条件                           <br />
+(A是实对称矩阵)----(A有三个相互正交的特征向量)
+由右向左推导：A有三个相互正交的特征向量，单位化为Q，则有$Q^{-1}AQ=\Lambda,进一步A=Q\Lambda Q^{-1}$,两边同时取转置，即得，$A^{T}=A$</p>
+<h3>10.4 谱分解</h3>
+<p><span class="fig"><img src="images/Pasted%20image%2020260916151516.png" style="width:412px;" alt="图 57"><span class="cap">图 57 · 对应原笔记第 920 行</span></span>
+<mark>将A分解为特征值打头，后面跟着对应特征向量的一列乘一行</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260916151728.png" style="" alt="图 58"><span class="cap">图 58 · 对应原笔记第 922 行</span></span>
+此时因为f(A)不改变特征向量，所以算$A^n-E$的分解式子，然后再把E右移过去，得到$A^n$
+具体分析：<span class="fig"><img src="images/Pasted%20image%2020261030110207.png" style="" alt="图 59"><span class="cap">图 59 · 对应原笔记第 924 行</span></span></p>
+<h3>10.5 相似判断题与传递性</h3>
+<p>两个矩阵相似：有相似的性质用于判断</p>
+<p><span class="fig"><img src="images/Pasted%20image%2020260916152421.png" style="" alt="图 60"><span class="cap">图 60 · 对应原笔记第 929 行</span></span>
+ 对于⑤的理解：
+ <span class="fig"><img src="images/Pasted%20image%2020260916152446.png" style="width:331px;" alt="图 61"><span class="cap">图 61 · 对应原笔记第 931 行</span></span></p>
+<p>传递性
+A与B相似，即$P^{-1}AP=B$，使用同一个手段，还能得到
+$P^{-1}(af(A)+bA^{-1}+cA^{*})P=af(B)+bB^{-1}+cB^{*}$
+而上述的这些不能与转置配合，因为转置所使用的手段与上面的不同！</p>
+<h3>10.6 正交矩阵与正定矩阵对照</h3>
+<p>正交矩阵：定义式$AA^{T}=E$
+- ==如果A为正交矩阵，则可以得到$A^T,A^{-1},A^{*},-A$也是正交矩阵
+-   A是正交矩阵如何推出A*是正交矩阵？
+- 正交矩阵的行列式为为正负一！
+- A，B为正交矩阵，但A+B不一定是正交矩阵
+- 正交矩阵的<mark>特征值的取值范围为{-1,1}</mark></p>
+<p>对比正定矩阵，正定矩阵前提是对称矩阵，正惯性指数为n,或者所有特征值都为正，则正定；
+如果A是正定矩阵，则$A^T,A^{-1},A^{*}$也是正定矩阵，因为操作后特征值仍都是正的</p>
+<h3>10.7 伴随矩阵相关的特殊结论</h3>
+<p><mark>与伴随相关的特殊条件下得出的结论</mark>：推导的主要流程是根据矩阵相等进一步得到行列式相等，然后解出行列式的取值
+<span class="fig"><img src="images/Pasted%20image%2020260916174001.png" style="" alt="图 62"><span class="cap">图 62 · 对应原笔记第 949 行</span></span></p>
+<p>题目给出某个矩阵是正交矩阵，你要想到，正交矩阵的要求是相当高的，
+由单位正交基拼成，每一个单位正交基的模长为1</p>
+<h3>10.8 判断两个非对称阵是否相似</h3>
+<p><mark>两个完全知道的矩阵A,B问你是不是存在P，使得$P^{-1}AP=B$</mark> , 且两个矩阵不能相似对角化；解决方式为：构造矩阵方程组$AP=PB$ , 将P写为列向量形式，然后转为下图所示：
+<span class="fig"><img src="images/Pasted%20image%2020260917120432.png" style="" alt="图 63"><span class="cap">图 63 · 对应原笔记第 956 行</span></span></p>
+<h3>10.9 二次型典型题（图组）</h3>
+<p><mark>二次型题目</mark>
+<span class="fig"><img src="images/Pasted%20image%2020260917161138.png" style="" alt="图 64"><span class="cap">图 64 · 对应原笔记第 959 行</span></span>
+- $\alpha^{T}\alpha=1$ , 说明$\alpha_{11}^{2}+\alpha_{22}^{2}+\alpha_{33}^{2}= 1$ ,又因为$\alpha\alpha^T$ 是一个秩一矩阵，其特征值为 tr($\alpha\alpha^T$),0,0; 所以得到其特征值为 1,0,0
+- 对于 E-$\alpha\alpha^T$，这个矩阵，可以根据答案上的思路对其使用将$\alpha\alpha^T$正交对角化的<strong>手段</strong>进行正交对角化，得到其特征值为0,1,1
+- 也可以对E-$\alpha\alpha^T$乘$\alpha$为0，得到特征值0，乘与$\alpha$正交的向量$\beta$得到，二重特征值1
+- 根据上面得到A的秩为2，进一步得到A<em>的秩为1
+- A</em>的特征值为对应A特征值的<mark>其余</mark>乘积(可用抖动法证明)，得到特征值为1,0,0
+- 又因为A是对称阵能得到A<em>也是对称阵，所以A</em>通过正交变换得到标准形</p>
+<p><span class="fig"><img src="images/Pasted%20image%2020260917162731.png" style="" alt="图 65"><span class="cap">图 65 · 对应原笔记第 967 行</span></span>
+- 题目给的条件，拆绝对值，然后移项，<mark>推出E+A与E-A都是正定矩阵</mark></p>
+<p><span class="fig"><img src="images/Pasted%20image%2020260917164839.png" style="" alt="图 66"><span class="cap">图 66 · 对应原笔记第 971 行</span></span>
+- A满秩，对于题目所给二次型进行恒等变形，得到$(Ax)^{T}Ax$ , 又因为Ax!=0,所以是正定的</p>
+<p><mark>判断两个非对称阵是否相似的方法：</mark>
+- ①以对角阵作为桥梁，看这两个非对称阵能不能化为同一个对角阵
+- ②如果上面的方法失效，则使用相似的定义，解矩阵方程</p>
+<ul>
+<li>如果其中一个是对称阵，则只需要看<mark>另外一个能不能相似对角化为特征值相同的对角矩阵</mark>，先求出特征值，判断特征值是不是一样，然后判断是不是有n个线性无关的特征向量能支持其化为对角阵！</li>
+</ul>
+<h3>10.10 合同判定与幂等矩阵</h3>
+<p>两个实对称矩阵合同的充分必要条件：
+- 正负惯性指数相同
+- 秩相同且正惯性指数相同(秩相同代表着正惯性指数+负惯性指数相同)</p>
+<p>相似理论：
+<mark>一个矩阵可相似对角化&lt;---&gt;该矩阵有n个线性无关特征向量</mark>
+- 可逆性保证了能相似对角化一定是无关向量
+- A与B相似，特征值相同(必要条件)，某一特征值对应特征矩阵的零空间相同还是只是零空间的维度相同？只是维度相同，特征向量并不一样！回忆表格里的内容，A与B相似，A与B的特征向量并不一样！</p>
+<p>关键推导！有关A和$A^T$,两个相乘，三个相乘，四个相乘的情况
+<span class="fig"><img src="images/Pasted%20image%2020260921153521.png" style="" alt="图 67"><span class="cap">图 67 · 对应原笔记第 990 行</span></span></p>
+<p>在<mark>没有给出可逆性的时</mark>候，题目给出的上三角矩阵或者下三角矩阵，不能一眼看出其秩为多少，要通过初等行变换!化为对角矩阵，然后观察秩为多少；</p>
+<p>幂等矩阵的性质：
+- 特征值只能是0或者1，可相似对角化
+- 实对称矩阵与半正定与正定的转化，正定矩阵一定可逆
+<span class="fig"><img src="images/Pasted%20image%2020260921165215.png" style="" alt="图 68"><span class="cap">图 68 · 对应原笔记第 999 行</span></span></p>
+<h2>11 · 最新补充</h2>
+<blockquote>
+<p><strong>本节导航</strong>：11.1 行列式的定义与逆序数 ｜ 11.2 880 方程组部分回顾（图组）</p>
+</blockquote>
+<p>补充瑞利商，强化中矩阵分解相关内容</p>
+<p>实对称矩阵的几何重数一定等于代数重数
+一个矩阵相似于对角阵，则一定是对称矩阵吗？(❌️)
+一个矩阵相似于对角阵，则几何重数一定等于代数重数吗(✅️)</p>
+<h3>11.1 行列式的定义与逆序数</h3>
+<p>使用逆序数，和行列式的定义——来自不同行不同列元素的乘积！
+<span class="fig"><img src="images/Pasted%20image%2020261118180612.png" style="" alt="图 69"><span class="cap">图 69 · 对应原笔记第 1013 行</span></span></p>
+<p><span class="fig"><img src="images/Pasted%20image%2020261118182112.png" style="" alt="图 70"><span class="cap">图 70 · 对应原笔记第 1017 行</span></span>
+<span class="fig"><img src="images/Pasted%20image%2020261118182102.png" style="" alt="图 71"><span class="cap">图 71 · 对应原笔记第 1018 行</span></span></p>
+<p><span class="fig"><img src="images/Pasted%20image%2020261118183859.png" style="" alt="图 72"><span class="cap">图 72 · 对应原笔记第 1020 行</span></span></p>
+<h3>11.2 880 方程组部分回顾（图组）</h3>
+<p>880方程组部分重点回顾！！
+尤其是各种n*s的矩阵的解的题目</p>
+<p><span class="fig"><img src="images/Pasted%20image%2020261120214319.png" style="" alt="图 73"><span class="cap">图 73 · 对应原笔记第 1027 行</span></span></p>
+<p><span class="fig"><img src="images/Pasted%20image%2020261121112736.png" style="" alt="图 74"><span class="cap">图 74 · 对应原笔记第 1029 行</span></span></p>
+<p><span class="fig"><img src="images/Pasted%20image%2020261121120607.png" style="" alt="图 75"><span class="cap">图 75 · 对应原笔记第 1031 行</span></span></p></div>
+<script>
+window.MathJax = {tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+(function(){
+  var nav=document.getElementById('toc'); if(!nav) return;
+  var hs=document.querySelectorAll('h2,h3'), h='<h2>目录</h2><ol>', inSub=false, n=0;
+  hs.forEach(function(el){
+    if(el.closest('nav')) return;
+    if(!el.id) el.id='sec'+(++n);
+    if(el.tagName==='H2'){ if(inSub){h+='</ul></li>';inSub=false;} h+='<li><a href="#'+el.id+'">'+el.textContent+'</a>'; inSub=false; h+='</li>'; }
+    else { if(!inSub){ h=h.replace(/<\/li>$/,''); h+='<ul>'; inSub=true; } h+='<li><a href="#'+el.id+'">'+el.textContent+'</a></li>'; }
+  });
+  if(inSub) h+='</ul></li>';
+  h+='</ol>'; nav.innerHTML=h;
+})();
+</script>
+</body></html>
